@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Deploy
+name: Build-Deploy
 
 # Controls when the workflow will run
 on:
@@ -23,19 +21,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Lets Build!
       
       - name: install dependencies
         run: npm install
 
-      # Runs a set of commands using the runners shell
       - name: build
         run: npm run build
           
   deploy:
       runs-on: ubuntu-latest
+      needs: build
       steps:
         - uses: actions/checkout@v4
         - name: Deploy
