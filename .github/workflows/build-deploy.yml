@@ -34,7 +34,7 @@ jobs:
         id: deployment
         uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
         with:
-          path: build_outputs_folder/
+          path: build/
           
   deploy:
       environment:
@@ -44,6 +44,7 @@ jobs:
       needs: build
       steps:
         - uses: actions/checkout@v4
+
         - name: Deploy
           uses: peaceiris/actions-gh-pages@v4.0.0
           if: github.ref == 'refs/heads/main'
