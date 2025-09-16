@@ -20,9 +20,10 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		// paths: {
+		// asset path root.
+		// paths: { 
         //     //base: process.argv.includes('dev') ? '' : process.env.BASE_PATH ///portfolio
-		// 	base: process.env.NODE_ENV === 'production' ? '/' : '', // process.env.BASE_PATH ///portfolio
+		// 	base: process.env.NODE_ENV === 'dev' ? '' : '/', '<- or name of repo'
         // }
 	}
 };
