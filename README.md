@@ -1,4 +1,14 @@
-# sv
+# Mindy instructions:
+1. Clone this repo: `gh repo clone mindalynworld/svelte-project-template`
+2. Initialize git in your local folder `git init` 
+3. Create a new repo in github browser 
+4. Add this new repo url as a remote to your local repo `git remote add origin https://github.com/mindalynworld/chef_mindalyn.git`
+5. git add, git commit, git push -u origin main
+
+1. Install dependencies: `npm install`
+2. Run development mode for the project `npm run dev`
+
+# svetle project instructions
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
