@@ -8,6 +8,8 @@
 1. Install dependencies: `npm install`
 2. Run development mode for the project `npm run dev`
 
+Noticed this last time that .github/workflows wasn't cloned. Investigate.
+
 # svetle project instructions
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
