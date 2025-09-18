@@ -21,10 +21,10 @@ const config = {
 			strict: true
 		}),
 		// asset path root.
-		// paths: { 
-        //     //base: process.argv.includes('dev') ? '' : process.env.BASE_PATH ///portfolio
-		// 	base: process.env.NODE_ENV === 'dev' ? '' : '/', '<- or name of repo'
-        // }
+		paths: { 
+            //base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			base: process.env.NODE_ENV === 'dev' ? '' : '/<name_of_repo>',
+        }
 	}
 };
 
