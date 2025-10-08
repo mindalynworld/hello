@@ -22,8 +22,7 @@ const config = {
 		}),
 		// asset path root.
 		paths: { 
-            //base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
-			base: process.env.NODE_ENV === 'dev' ? '' : '/<name_of_repo>',
+			base: process.env.NODE_ENV === 'dev' ? '' : '/hello',
         }
 	}
 };
