@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&display=swap');
+
+:root {
+    --primary-color: cornsilk;
+    --secondary-color: #6C9FFF;
+    --font-family: 'Anaheim';
+
+    body, button {
+        font-family: var(--font-family);
+        background-color: var(--primary-color);
+        /* margin: 0; */
+    }
+}
