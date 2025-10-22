@@ -11,9 +11,14 @@
 
     --border-radius: 5px;
 
-    body, button {
-        font-family: var(--font-family);
+    font-family: var(--font-family);
+
+    body {
         background-color: var(--primary-color);
         /* margin: 0; */
+    }
+
+    button {
+        font-family: var(--font-family);
     }
 }
