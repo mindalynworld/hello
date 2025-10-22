@@ -5,6 +5,12 @@
     --secondary-color: #6C9FFF;
     --font-family: 'Anaheim';
 
+    --arts-color: #AB91F2;
+    --tech-color: #F5B031;
+    --edu-color: #81CE3C;
+
+    --border-radius: 5px;
+
     body, button {
         font-family: var(--font-family);
         background-color: var(--primary-color);

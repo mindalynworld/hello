@@ -2,10 +2,17 @@
 	import '../app.css';
     import { resolve } from '$app/paths';
 	import ButtonGroup from '$lib/Components/ButtonGroup.svelte';
+	import { goto } from "$app/navigation";
 
 	let { children } = $props();
 
-	let selectedOption = $state('about');
+	let selectedOption = $state({label: "about", route: resolve(`/about`)});
+
+	$effect(() => {
+		goto(selectedOption.route);
+	})
+
+	
 </script>
 
 <div class="header"> 
@@ -15,14 +22,14 @@
 			<!-- <p class="name">Mindy Ng</p> -->
 			<p class="tagline">social impact through data storytelling, movement, & education</p>
 			<p class="contact">
-				mindylynnng@gmail.com // <a href="https://www.linkedin.com/in/mindylynnng/">LinkedIn</a>
+				mindylynnng@gmail.com //&nbsp;<a href="https://www.linkedin.com/in/mindylynnng/">LinkedIn</a>
 			</p>
 		</div>
 	</div>
 	<nav>
 		<!-- <Button text="about" route={resolve(`/about`)}></Button>
 		<Button text="projects" route={resolve(`/projects`)}></Button> -->
-		<ButtonGroup options={[{label: "about", route: resolve(`/about`)}, {label: "projects", route: resolve(`/projects`)}]}></ButtonGroup>
+		<ButtonGroup bind:selectedOption={selectedOption} options={[{label: "about", route: resolve(`/about`)}, {label: "projects", route: resolve(`/projects`)}]}></ButtonGroup>
 	</nav>
 </div>
 
