@@ -1,9 +1,6 @@
 <script lang="ts">
     import * as d3 from 'd3';
-
-    var arts_color_faded = "rgba(195, 175, 252, 0.75)"; 
-    var edu_color_faded = "rgba(205, 232, 181, 0.75)";
-    var tech_color_faded = "rgba(252, 191, 78, 0.75)";
+    import { onMount } from 'svelte';
 
     let arts_color = "#AB91F2";
     let tech_color = "#F5B031";
@@ -11,29 +8,14 @@
 
     var colors = [arts_color, tech_color, edu_color];
     
-    var colors_faded = [edu_color_faded, arts_color_faded, tech_color_faded];
     let used: Set<number>;
-
-    function generateRandomIndex(maxIndex: number, used_set: Set<number>) {
-        var index = Math.round(Math.random() * maxIndex)
-        if (used_set.has(index)) {
-            if (used_set.size == maxIndex+1) {
-                return 0; // no more indices
-            }
-            index = generateRandomIndex(maxIndex, used_set);
-        }
-        used_set.add(index)
-        return index;
-    }
-    
-    import { onMount } from 'svelte';
 
     onMount(() => {
         init();
     });
 
     function init(): void {
-         // /* start logo animations */
+        /* start logo animations */
         recolor();
         setInterval(recolor, 6000);
     }
@@ -65,6 +47,18 @@
                 .duration(1000)
                 .attr("fill", () => colors[generateRandomIndex(2, used)])
             });
+    }
+
+    function generateRandomIndex(maxIndex: number, used_set: Set<number>) {
+        var index = Math.round(Math.random() * maxIndex)
+        if (used_set.has(index)) {
+            if (used_set.size == maxIndex+1) {
+                return 0; // no more indices
+            }
+            index = generateRandomIndex(maxIndex, used_set);
+        }
+        used_set.add(index)
+        return index;
     }
 </script>
 
