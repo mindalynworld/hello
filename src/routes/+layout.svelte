@@ -15,27 +15,24 @@
 
 	
 </script>
-
-<div class="header"> 
-	<div class="title">
-		<!-- <img class="logo" src="{resolve(`/logo/logo-basic.png`)}" alt="three circles logo"> -->
-		<Logo></Logo>
-		<div>
-			<!-- <p class="name">Mindy Ng</p> -->
-			<p class="tagline">social impact through data storytelling, movement arts, & education</p>
-			<p class="contact">
-				mindylynnng@gmail.com //&nbsp;<a href="https://www.linkedin.com/in/mindylynnng/">LinkedIn</a>
-			</p>
+<main>
+	<div class="header"> 
+		<div class="title">
+			<Logo></Logo>
+			<div>
+				<p class="tagline">social impact through data storytelling, movement arts, & education</p>
+				<p class="contact">
+					mindylynnng@gmail.com //&nbsp;<a href="https://www.linkedin.com/in/mindylynnng/">LinkedIn</a>
+				</p>
+			</div>
 		</div>
+		<nav>
+			<ButtonGroup bind:selectedOption={selectedOption} options={[{label: "about", route: resolve(`/about`)}, {label: "projects", route: resolve(`/projects`)}]}></ButtonGroup>
+		</nav>
 	</div>
-	<nav>
-		<!-- <Button text="about" route={resolve(`/about`)}></Button>
-		<Button text="projects" route={resolve(`/projects`)}></Button> -->
-		<ButtonGroup bind:selectedOption={selectedOption} options={[{label: "about", route: resolve(`/about`)}, {label: "projects", route: resolve(`/projects`)}]}></ButtonGroup>
-	</nav>
-</div>
 
-{@render children()}
+	{@render children()}
+</main>
 
 <style>
 	.header {
@@ -57,18 +54,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		/* height: 80%; */
-	
-		/* .logo {
-			height: 8rem;
-			width: 8rem;
-			padding-right: 1rem;
-		} */
-
-		/* .name {
-			font-size: 30px;
-			margin: 0;
-		} */
 
 		.contact, .tagline {
 			justify-content: center;

@@ -4,8 +4,16 @@
 
 </script>
 
-<h1>projects</h1>
+<div class="page">
+    <h1>projects</h1>
 
-{#each projects as project}
-    <ProjectCard project={project}></ProjectCard>
-{/each}
+    {#each projects as project}
+        <ProjectCard project={project}></ProjectCard>
+    {/each}
+</div>
+
+<style>
+    .page {
+        padding: var(--page-padding);
+    }
+</style>
