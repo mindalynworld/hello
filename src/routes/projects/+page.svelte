@@ -7,13 +7,26 @@
 <div class="page">
     <h1>projects</h1>
 
-    {#each projects as project}
-        <ProjectCard project={project}></ProjectCard>
-    {/each}
+    <div class="cards">
+        {#each projects as project}
+            <div class="card">
+                <ProjectCard project={project}></ProjectCard>
+            </div>
+        {/each}
+    </div>
 </div>
 
 <style>
     .page {
         padding: var(--page-padding);
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 1rem;
     }
 </style>

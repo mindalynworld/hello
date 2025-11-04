@@ -2,32 +2,39 @@
 	import '../app.css';
     import { resolve } from '$app/paths';
 	import ButtonGroup from '$lib/Components/ButtonGroup.svelte';
-	import { goto } from "$app/navigation";
+	import { afterNavigate, goto } from "$app/navigation";
 	import Logo from '$lib/Components/Logo.svelte';
 
 	let { children } = $props();
 
-	let selectedOption = $state({label: "about", route: resolve(`/about`)});
+	const pages: string[] = ['about', 'projects']
 
-	$effect(() => {
-		goto(selectedOption.route);
+	let selectedOption = $state(pages[0]);
+
+	// $effect(() => handleNavigate(selectedOption))
+
+	function handleNavigate(page: string) {
+		goto(resolve('/[slug]', {slug: page}));
+	}
+
+	afterNavigate((navigation) => {
+		selectedOption = navigation.to?.route.id ? navigation.to?.route.id.slice(1) : "about";
 	})
 
-	
 </script>
 <main>
 	<div class="header"> 
 		<div class="title">
 			<Logo></Logo>
 			<div>
-				<p class="tagline">social impact through data storytelling, movement arts, & education</p>
+				<p class="tagline">social impact at the intersection of data storytelling, movement arts, & education</p>
 				<p class="contact">
 					mindylynnng@gmail.com //&nbsp;<a href="https://www.linkedin.com/in/mindylynnng/">LinkedIn</a>
 				</p>
 			</div>
 		</div>
 		<nav>
-			<ButtonGroup bind:selectedOption={selectedOption} options={[{label: "about", route: resolve(`/about`)}, {label: "projects", route: resolve(`/projects`)}]}></ButtonGroup>
+			<ButtonGroup bind:selectedOption={selectedOption} options={pages} onClick={handleNavigate}></ButtonGroup>
 		</nav>
 	</div>
 

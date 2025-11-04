@@ -1,6 +1,5 @@
 <script lang="ts">
     import { resolve } from '$app/paths';
-    import { goto } from "$app/navigation";
     import type { Project } from "../../../static/data/projects"
 	import Button from './Button.svelte';
 
@@ -24,7 +23,7 @@
     </div>
     <p class="description">{project.desc_short}</p>
     <p>
-        <b>Client: </b> {project.client}
+        <b>Client: </b> <a href={project.clientLink} target="_blank" rel="noopener noreferrer">{project.client}</a>
     </p>
     <p>
         <b>Technologies: </b>
@@ -112,4 +111,7 @@
         margin-bottom: 0;
     }
 
+    a {
+        color: var(--client-link-color);
+    }
 </style>
