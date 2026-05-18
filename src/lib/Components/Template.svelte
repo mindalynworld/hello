@@ -2,6 +2,8 @@
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
 
+    let vis: HTMLElement;
+
     onMount(() => {
         init();
     });
@@ -12,6 +14,8 @@
 
 </script>
 
-<main></main>
+<main>
+    <div id="vis" bind:this={vis}></div>
+</main>
 
 <style></style>

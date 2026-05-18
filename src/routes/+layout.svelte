@@ -14,7 +14,7 @@
 	// $effect(() => handleNavigate(selectedOption))
 
 	function handleNavigate(page: string) {
-		goto(resolve('/[slug]', {slug: page}));
+		goto(resolve('/[slug]', {slug: page})); //checking if this is causing the asynch handler error
 	}
 
 	afterNavigate((navigation) => {
@@ -66,12 +66,19 @@
 			justify-content: center;
         	display: flex;
 			margin: 1rem;
-			font-weight: 600;
 			text-align: center;
 			
 			a {
 				color: var(--primary-color);
 			}
+		}
+
+		.tagline {
+			font-weight: 600;
+		}
+
+		.contact {
+			font-weight: 400;
 		}
 	}
 </style>
