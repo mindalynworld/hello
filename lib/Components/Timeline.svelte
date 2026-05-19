@@ -15,7 +15,7 @@
     const num_items = 21; // determines height
     // should count months between start date and today's date + 1
     const num_months = 124 + 1; // up to dec 2025. this needs to be updated as time progresses
-    const w = (num_months * month_length) + padding * 2; // + 200 is to allow for title overflow
+    const w = (num_months * month_length) + padding*2; // + 200 is to allow for title overflow
     const h = (num_items * (item_height * 2 + rect_padding)) + padding*2;
 
     /* COLOR DEFINITIONS (TODO: maybe this can exist in styles and just add attr class?) */
@@ -107,13 +107,14 @@
     
         /* titles on the timeline */
         itemGroup.append('text')
+            .attr("class", "item-title")
             .attr('x', d => isFirstHalf(d) ? getX(d, 45, true) : getX(d, 45, false))
             .attr('y', d => {
                 let temp = startY3; startY3 = updateCurrY(d, startY3);
-                return getCenterY(d, temp, 5);
+                return getCenterY(d, temp, 6);
             })
             .attr('text-anchor', d => isFirstHalf(d) ? "start" : "end")
-            .attr('font-size', "1.4rem")
+            // .attr('font-size', "1.4rem")
             .attr('fill', primary_color)
             .attr('opacity', 0.7)
             .text((d) => d.title);
@@ -349,7 +350,7 @@
                 </div>
             </div>
         
-        <div class="timeline" bind:this={vis}>
+        <div class="timeline-container">
             <div class="annotation-layer">
                 <div class="item-description">
                     <div class="header"> 
@@ -360,7 +361,12 @@
                     <div class="item-description-text"></div>
                 </div>
             </div>
+
+            <div class="timeline" bind:this={vis}>
+            
+            </div>
         </div>
+        
     </div>
 
 </div>
@@ -377,15 +383,35 @@
         flex-direction: column;
         justify-content: center;
         max-width: 900px;
+        
     }
 
     :global(.item-group) {
         cursor: pointer;
     }
 
+    :global(.item-title) {
+        font-size: 1.4rem;
+
+        /* /* @media (600px <= width <= 800px) {
+            font-size: 1.6rem;
+        } */
+
+        @media (width <= 800px) {
+            font-size: 1.6rem;
+        }
+    }
+
+    .timeline-container {
+        position: relative;
+    }
 
     .timeline {
-        position: relative;
+        overflow: scroll;
+    }
+
+    :global(.timeline-svg) {
+        min-width: 650px;
     }
 
     .annotation-layer {
@@ -402,6 +428,7 @@
    .item-description {
         background-color: cornsilk;  /*  fallback color */
         width: 50%;
+        min-width: 300px;
         opacity: 0.8;
         padding: 2% 3%;
         border: solid 1.5px;

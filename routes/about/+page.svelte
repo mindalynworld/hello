@@ -13,5 +13,9 @@
 <style>
     .page {
         padding: var(--page-padding);
+
+        @media (width <= 700px) {
+            padding: 0.5rem;
+        }
     }
 </style>
