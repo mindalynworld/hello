@@ -12,6 +12,8 @@
 
 <style>
     .page {
+        display: flex;
+        flex-direction: column;
         padding: var(--page-padding);
 
         @media (width <= 700px) {
