@@ -1,6 +1,7 @@
 <script lang="ts">
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
+    import { determineColorsByWeight } from '$lib/Helpers/helpers';
 
     let vis: HTMLElement;
     let timelineSvg: d3.Selection<SVGSVGElement, unknown, null, undefined>;
@@ -53,7 +54,6 @@
 
     function loadData() {
         d3.csv("data/personalExperienceData.csv").then( function(data) {
-            console.log(data);
             let clean = data.filter((item) => (+item.include == 1));
             clean.sort((a,b) => +a.start_mo - +b.start_mo) // sort by start date
 
@@ -88,7 +88,7 @@
                 .attr('stroke-width', 1.5)
                 .attr('rx', corner_radius)
                 .attr('ry', corner_radius)
-                .attr("fill", d => determineColors(d, true));
+                .attr("fill", d => determineColorsByWeight(d, true));
 
         // deciding which side to put the title on. TODO: There's gotta be a better way. should base it on item number rather than where the last one is. but i guess time level matters
         itemGroup.append("line")
@@ -208,15 +208,15 @@
             .classed("active", true)
             .attr("style", function() {
                 if ((+d.edu_weight == 1) || (+d.arts_weight == 1) || (+d.tech_weight == 1)) {
-                    return "background-color:"+determineColors(d, false)
+                    return "background-color:"+determineColorsByWeight(d, false)
                 } else {
-                    return "background-image:"+determineColors(d, false)
+                    return "background-image:"+determineColorsByWeight(d, false)
                 }
             })
             .select(".item-description-text")
             .html(`
-                <p style="font-weight: 600; font-size: 1.2rem; margin-top: 0;">${d.title}</p>
-                <p style="font-weight: 500;">
+                <p style="font-weight: 600; font-size: 1.2rem; margin: 0;">${d.title}</p>
+                <p style="font-weight: 500; margin-top: 0;">
                     ${d.location} <br>
                     ${d.start_date} - ${d.end_date}
                 </p>
@@ -249,33 +249,7 @@
         }
     }
 
-    function determineColors(d: d3.DSVRowString<string>, isSVG: boolean): string { // update this to be more parameter based so it can cover more cases
-            if (+d.edu_weight == 1) {
-                return edu_color;
-            }
-            if (+d.arts_weight == 1) {
-                return arts_color;
-            }
-            if (+d.tech_weight == 1) {
-                return tech_color;
-            }
-        
-            if (+d.edu_weight > 0) {
-                if (+d.arts_weight > 0) {
-                    if (+d.tech_weight > 0) {
-                        return isSVG ? `url(#allGradient)` : `linear-gradient(to right bottom, ${arts_color},  ${edu_color}, ${tech_color})`;
-                    }
-                    return isSVG ? `url(#eduArtsGradient)`: `linear-gradient(to right bottom, ${arts_color},  ${edu_color})`;
-                }
-                else if (+d.tech_weight > 0) {
-                    return isSVG ? `url(#eduTechGradient)` : `linear-gradient(to right bottom, ${edu_color}, ${tech_color})`;
-                }
-            } else if (+d.arts_weight > 0 && +d.tech_weight > 0) {
-                return isSVG ? `url(#techArtsGradient)` : `linear-gradient(to right bottom, ${arts_color}, ${tech_color})`;
-            }
 
-            return "";
-    }
 
     function createGradient(id: string, color1: string, perc1: string, color2: string, perc2: string, color3?:string, perc3?:string) {
             var gradient = defs.append("linearGradient")

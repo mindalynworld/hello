@@ -2,15 +2,31 @@
     import { resolve } from '$app/paths';
     import type { Project } from "../../../static/data/projects"
 	import Button from './Button.svelte';
+    // import * as d3 from 'd3';
+    // import { determineColors } from '$lib/Helpers/helpers';
+    // import { onMount } from 'svelte';
 
     let { project } : { project: Project } = $props();
+
+    // onMount(() => {
+    //     init();
+    // });
+
+    // function init(): void {
+    //     d3.select(".card").attr("style", function() {
+    //         if ((project.edu && !project.arts && !project.tech) || (!project.edu && project.arts && !project.tech) || (!project.edu && !project.arts && project.tech)) {
+    //             return "background-color:"+determineColors(project, false);
+    //         } else {
+    //             return "background-image:"+determineColors(project, false);
+    //         }
+    //     });
+    // }
 
 </script>
 
 <div class="card">
     <img class="thumbnail" src="{resolve(project.imgSrc)}" alt="FILL IN">
-    <h3 class="title">{project.title}</h3>
-    <div class="categories">
+        <div class="categories">
         {#if project.arts}
             <p class="category" id="arts">arts</p>
         {/if}
@@ -21,12 +37,16 @@
             <p class="category" id="edu">education</p>
         {/if}
     </div>
+    <h3 class="title">{project.title}</h3>
     <p class="description">{project.desc_short}</p>
-    <p>
-        <b>Client: </b> <a href={project.clientLink} target="_blank" rel="noopener noreferrer">{project.client}</a>
+    <p class="metadata">
+        <b>Partners: </b> 
+        {#each project.clients as client, i}
+            <a href={project.clientLinks[i]} target="_blank" rel="noopener noreferrer">{client}</a> &nbsp;
+        {/each}
     </p>
-    <p>
-        <b>Technologies: </b>
+    <p class="metadata">
+        <b>Tools: </b>
         {#each project.technologies as technology}
             {technology} &nbsp;
         {/each}
@@ -45,7 +65,7 @@
 
 <style>
     .card {
-        width: 350px;
+        width: 300px;
 
         display: flex;
         flex-direction: column;
@@ -60,14 +80,18 @@
     }
 
     .thumbnail {
-        width: 75%;
+        height: 190px;
         margin: 0 auto 1rem;
+    }
+
+    .description {
+        font-weight: 500;
+        text-align: center;
     }
 
     .categories {
         display: flex;
-        justify-content: space-around;
-        padding: 0 30px;
+        justify-content: center;
     }
 
     .category {
@@ -75,10 +99,11 @@
         flex-direction: column;
         justify-content: center;
         font-weight: 700;
-        width: 5.5rem;
-        height: 1.5rem;
+        font-size: 14px;
+        width: 4.5rem;
+        height: 1.3rem;
         text-align: center;
-        margin: 0;
+        margin: 0 5px;
         border-radius: var(--border-radius);
         color: var(--primary-color);
 
@@ -95,12 +120,17 @@
 
     .title {
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .metadata {
+        font-size: 15px;
     }
 
     .hashtags {
         color: var(--secondary-color);
         font-weight: 700;
+        font-size: 14px;
     }
 
     .btn-container {
