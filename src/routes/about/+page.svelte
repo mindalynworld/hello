@@ -1,6 +1,7 @@
 <script lang="ts">
     import { resolve } from "$app/paths";
 	import Button from "$lib/Components/Button.svelte";
+	import StackedAreaChart from "$lib/Components/StackedAreaChart.svelte";
     import Timeline from "$lib/Components/Timeline.svelte";
     import { handleNavigate } from "$lib/Helpers/helpers";
 
@@ -22,7 +23,7 @@
     <div class="content">
         <div class="intro">
             <div class="img">
-                <img class="headshot" src="{resolve(imgSrc)}" alt="FILL IN">
+                <img class="headshot" src="{resolve(imgSrc)}" alt="photo of mindy">
             </div>
             <div class="text">
                 <p>
@@ -52,35 +53,46 @@
     
 
         <div class="resume-explorer" id="resume-explorer">
+
+            <h2 class="title">Interactive Resume Explorer</h2>
             <div class="timeline-intro">
-                <h3 class="title">Interactive Resume Explorer</h3>
                 <p class="section-1">
-                    When I look at my past work, I notice that every experience is connected to one or more of these key themes:
+                    When looking back at my career, I started to notice that every experience fell into one or more of these key themes:
                     <span class="intro-themes" style="border-color: rgb(245, 176, 49); background-color: rgb(245, 176, 49, 0.7);">Data & Technology</span>, 
                     <span class="intro-themes" style="border-color: rgb(183, 224, 146); background-color: rgb(183, 224, 146, 0.7); ">Education & Community Organizing</span>, and 
                     <span class="intro-themes" style="border-color: rgb(171, 145, 242); background-color: rgb(171, 145, 242, 0.7);">Arts & Storytelling</span>. 
                 </p>
                 <p>
-                    I was curious about how my involvement in each of these themes has looked like over time. 
-                    <span class="emphasize-text">Have I maintained a balance or some taken precedence at different periods of my life?</span> 
-                    I decided to visualize it with data.
+                    I was curious about how my involvement in each of these categories has looked or changed over time. 
+                
+                    I started by entering all of my experiences from 2016 - 2025 into a spreadsheet, tagging them with themes, their level of time commitment, and duration. 
+                    Then, I decided to visualize it. <i>Click on items in the chart below to explore.</i>
                 </p>
-                <p>
-
-                    Below, you’ll find a visualization of my career journey from 2016 - 2025. <span class="emphasize-text">Click items to read more</span>:
-                </p>
-
             </div>
 
+                <h3 class="chart-title">Experience Timeline</h3>
+                <!-- <p class="subtitle">
+                    <i>Click items to read more</i>.
+                </p> -->
+            
+
             <Timeline></Timeline>
+
+            <div class="area-chart-intro">
+                <p>At a glance, the colors in the Experience Timeline look relatively balanced. But has is always been this way?
+                    <span class="emphasize-text">Have I maintained a balance or have I prioritized categories in different periods of my life?</span>
+                </p>
+            </div>
+            <h3 class="chart-title">Evolution over time</h3>
+            <StackedAreaChart></StackedAreaChart>
         </div>
 </div>
 </div>
 
 <style>
     .page {
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
         padding: var(--page-padding);
 
         @media (width <= 700px) {
@@ -92,7 +104,7 @@
         padding: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
     }
 
@@ -100,6 +112,7 @@
         display: flex;
         flex-direction: row;
         max-width: 900px;
+        margin-bottom: 6rem;
 
         @media (width <= 800px) {
             flex-direction: column;
@@ -176,21 +189,32 @@
         cursor: pointer;
     }
 
-    .resume-explorer-container {
-        display: flex;
-        justify-content: center;
-    }
-
     .resume-explorer {
-        padding: 3rem;
+        margin: 3rem;
+        width: 100%;
         max-width: 900px;
     }
 
     .title {
-        margin-bottom: 0.5rem;
+        margin-bottom: 2rem;
+        color: var(--tertiary-text-color);
+        text-align: center;
     }
 
+    .chart-title {
+        display: flex;
+        justify-content: center;
+        color: var(--tertiary-text-color);
+    }
+
+    /* .subtitle {
+        display: flex;
+        justify-content: center;
+        color: var(--tertiary-text-color);
+    } */
+
     .intro-themes {
+        border: solid;
         border-radius: 1rem; 
         margin: 0.5rem;
         font-weight: 600;
@@ -201,11 +225,24 @@
     } 
 
     .timeline-intro {
-        margin-top: 1.5rem;
+        margin-bottom: 6rem;
+        text-align: center;
+        border: solid 1px;
+        border-radius: 1rem;
+        background: var(--secondary-color-light);
 
         .section-1 {
             line-height: 2;
         }
     } 
+
+    .area-chart-intro {
+        margin: 6rem 0;
+        padding: 1rem;
+        text-align: center;
+        border: solid 1px;
+        border-radius: 1rem;
+        background: var(--secondary-color-light);
+    }
        
 </style>

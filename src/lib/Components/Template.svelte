@@ -19,3 +19,15 @@
 </main>
 
 <style></style>
+
+
+
+<!-- FOR IMAGES
+<script lang="ts">
+    import { resolve } from "$app/paths";
+
+    let imgSrc = "/images/area-chart-annotations.svg";
+</script>
+
+
+<img src="{resolve(imgSrc)}" alt="stacked area chart of experiences"/> -->
