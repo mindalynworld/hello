@@ -25,18 +25,21 @@
         padding: var(--page-padding);
     }
 
-    .card-container {
+    /* .card-container {
         display: flex;
         justify-content: center;
-    }
+    } */
 
     .cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* flex-start; */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 16px;
+        /* flex-wrap: wrap;
+        justify-content: center; flex-start; */
     }
 
     .card {
         margin: 1rem;
+        justify-self: center;
     }
 </style>

@@ -1,7 +1,7 @@
 <script lang="ts">
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
-    import { determineColorsByWeight } from '$lib/Helpers/helpers';
+    import { determineColorsByWeight, colors } from '$lib/Helpers/helpers';
 
     let vis: HTMLElement;
     let timelineSvg: d3.Selection<SVGSVGElement, unknown, null, undefined>;
@@ -20,10 +20,11 @@
     const h = (num_items * (item_height * 2 + rect_padding)) + padding*2;
 
     /* COLOR DEFINITIONS (TODO: maybe this can exist in styles and just add attr class?) */
-    const primary_color = "#454545";
-    const arts_color = "rgb(195, 175, 252)"; 
-    const edu_color = "rgb(205, 232, 181)";
-    const tech_color = "rgb(252, 191, 78)"; // 255, 200, 100
+    const primary_color = colors["primary"];
+    const arts_color = colors["arts"];
+    const edu_color = colors["edu"];
+    const tech_color = colors["tech"];
+
     // const arts_color_faded = "rgba(195, 175, 252, 0.75)"; // TODO: can we just make this opacity instead of a separate color
     // const edu_color_faded = "rgba(205, 232, 181, 0.75)";
     // const tech_color_faded = "rgba(252, 191, 78, 0.75)";
@@ -249,8 +250,6 @@
         }
     }
 
-
-
     function createGradient(id: string, color1: string, perc1: string, color2: string, perc2: string, color3?:string, perc3?:string) {
             var gradient = defs.append("linearGradient")
                 .attr("id", id)
@@ -298,11 +297,11 @@
                     <p class="legend-title">Category</p>
                     <svg class="svg-category" width="250" height="70" preserveAspectRatio="xMinYMin meet" viewBox="0 0 175 70">
                         <!-- eventually make title svg so it can size dynamically -->
-                        <circle class="legend-symbol" cx="18" cy="8" r="7" fill="rgba(252, 191, 78, 0.75)"></circle>
-                            <text class="legend-text" x="30" y="13">Technology & Data</text>
-                        <circle class="legend-symbol" cx="18" cy="28" r="7" fill="rgba(205, 232, 181, 0.75)"></circle>
+                        <circle class="legend-symbol" cx="18" cy="8" r="7" fill="rgba(245, 176, 49, 0.75)"></circle>
+                            <text class="legend-text" x="30" y="13">Data & Technology</text>
+                        <circle class="legend-symbol" cx="18" cy="28" r="7" fill="rgba(183, 224, 146, 0.75)"></circle>
                             <text class="legend-text" x="30" y="33">Education & Community Building</text>
-                        <circle class="legend-symbol" cx="18" cy="48" r="7" fill="rgba(195, 175, 252, 0.75)"></circle>
+                        <circle class="legend-symbol" cx="18" cy="48" r="7" fill="rgba(171, 145, 242, 0.75)"></circle>
                             <text class="legend-text" x="30" y="53">Arts & Storytelling</text>
                     </svg>
                 </div>
@@ -352,7 +351,7 @@
     }
 
     .vis-wrapper {
-        border: solid 1px black;
+        /* border: solid 1px black; */
         display: flex;
         flex-direction: column;
         justify-content: center;

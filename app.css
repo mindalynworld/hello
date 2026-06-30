@@ -3,11 +3,13 @@
 :root {
     --primary-color: cornsilk;
     --secondary-color: #6C9FFF;
+    --primary-text-color: black;
+    --secondary-text-color: white;
     --font-family: 'Anaheim';
 
-    --arts-color: #AB91F2;
-    --tech-color: #F5B031;
-    --edu-color: #81CE3C;
+    --arts-color: #AB91F2; /*  rgb(171, 145, 242) */
+    --tech-color: #F5B031; /*  rgb(245, 176, 49) */
+    --edu-color: #b7e092;  /*  rgb(183, 224, 146) */
 
     --client-link-color: black;
 
