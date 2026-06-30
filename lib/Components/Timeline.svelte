@@ -351,7 +351,7 @@
     }
 
     .vis-wrapper {
-        /* border: solid 1px black; */
+        border: solid 1px black;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -443,7 +443,7 @@
         justify-content: flex-start;
         /* width: 90%; */
         margin: 0 1.5rem 1.5rem;
-        color: var(--main-text-color);
+        color: var(--primary-text-color);
         flex-wrap: wrap;
 
         .legend-title {
@@ -453,7 +453,7 @@
         }
 
         .legend-symbol {
-            stroke: var(--main-border-color);
+            stroke: var(--primary-text-color);
             stroke-width: 0.1rem;
         }
 
@@ -462,7 +462,7 @@
         }
 
         .legend-text {
-            fill: var(--main-text-color);;
+            fill: var(--primary-text-color);;
             font-size: 1rem;
         }
 

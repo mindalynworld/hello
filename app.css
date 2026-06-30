@@ -3,8 +3,10 @@
 :root {
     --primary-color: cornsilk;
     --secondary-color: #6C9FFF;
+    --secondary-color-light: #dde4f1;
     --primary-text-color: black;
     --secondary-text-color: white;
+    --tertiary-text-color: #4D4848;
     --font-family: 'Anaheim';
 
     --arts-color: #AB91F2; /*  rgb(171, 145, 242) */
@@ -20,6 +22,7 @@
 
     body {
         background-color: var(--primary-color);
+        font-size: 18px;
         /* margin: 0; */
     }
 
