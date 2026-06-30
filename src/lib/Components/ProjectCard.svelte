@@ -2,25 +2,8 @@
     import { resolve } from '$app/paths';
     import type { Project } from "../../../static/data/projects"
 	import Button from './Button.svelte';
-    // import * as d3 from 'd3';
-    // import { determineColors } from '$lib/Helpers/helpers';
-    // import { onMount } from 'svelte';
 
     let { project } : { project: Project } = $props();
-
-    // onMount(() => {
-    //     init();
-    // });
-
-    // function init(): void {
-    //     d3.select(".card").attr("style", function() {
-    //         if ((project.edu && !project.arts && !project.tech) || (!project.edu && project.arts && !project.tech) || (!project.edu && !project.arts && project.tech)) {
-    //             return "background-color:"+determineColors(project, false);
-    //         } else {
-    //             return "background-image:"+determineColors(project, false);
-    //         }
-    //     });
-    // }
 
 </script>
 

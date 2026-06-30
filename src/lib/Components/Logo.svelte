@@ -1,12 +1,9 @@
 <script lang="ts">
     import * as d3 from 'd3';
-    import { onMount } from 'svelte';
+    import { onMount } from 'svelte';    
+    import { colors } from '$lib/Helpers/helpers';
 
-    let arts_color = "#AB91F2";
-    let tech_color = "#F5B031";
-    let edu_color = "#81CE3C";
-
-    var colors = [arts_color, tech_color, edu_color];
+    var colorsList = [colors["arts"], colors["tech"], colors["edu"]];
     
     let used: Set<number>;
 
@@ -26,26 +23,26 @@
             .transition()
             .delay((d: any, i: number) => i*500)
             .duration(1000)
-            .attr("fill", (d: any, i: number) => colors[i])
+            .attr("fill", (d: any, i: number) => colorsList[i])
             .on("end", function() {
                 used = new Set<number>();
 
                 d3.selectAll("#technology")
                 .transition()
                 .duration(1000)
-                .attr("fill", () => colors[generateRandomIndex(2, used)])
+                .attr("fill", () => colorsList[generateRandomIndex(2, used)])
 
                 d3.selectAll("#education")
                 .transition()
                 .delay(500)
                 .duration(1000)
-                .attr("fill", () => colors[generateRandomIndex(2, used)])
+                .attr("fill", () => colorsList[generateRandomIndex(2, used)])
 
                 d3.selectAll("#arts")
                 .transition()
                 .delay(1000)
                 .duration(1000)
-                .attr("fill", () => colors[generateRandomIndex(2, used)])
+                .attr("fill", () => colorsList[generateRandomIndex(2, used)])
             });
     }
 
@@ -67,15 +64,15 @@
         <g>
             <circle class="logo-circle" id="arts"
             cx="150" cy="80" r="40"
-            fill={colors[0]}
+            fill={colorsList[0]}
             />
             <circle class="logo-circle" id="technology"
             cx="120" cy="120" r="40"
-            fill={colors[1]}
+            fill={colorsList[1]}
             />
             <circle class="logo-circle" id="education"
             cx="180" cy="120" r="40"
-            fill={colors[2]}
+            fill={colorsList[2]}
             />
             <text class="name" x="50" y="120">Mindy Ng</text>
         </g>
