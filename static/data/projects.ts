@@ -7,11 +7,13 @@ export interface Project {
     arts: boolean;
     tech: boolean;
     edu: boolean;
-    technologies?: string[];
+    technologies: string[];
+    responsibilities: string[];
     hashtags: string[];
     link: string;
     desc_short: string;
     desc_long?: string;
+    internalSlug?: string;
 }
 
 // export type Category = "ARTS" | "DATA/TECH" | "EDUCATION";
@@ -29,7 +31,8 @@ export const projects: Project[] = [
         technologies: ["d3", "Svelte", "R", "git", "GIS", "Figma", "Github Pages", "Google Analytics"],
         hashtags: ["#dataviz", "#dataanalysis", "#scrollytelling", "#interactive", "#animations", "#webdev", "#projectmanagement", "#visualdesign", "#maps"],
         link: "https://ingenuity-chicago.github.io/laef_impact/",
-        desc_short: "Visualizing the impact of Lollapalooza's $2.2 Million investment in arts education in Chicago Public Schools through long-form scrollytelling."
+        desc_short: "Visualizing the impact of Lollapalooza's $2.2 million investment in arts education in Chicago Public Schools through long-form, interactive and animated scrollytelling.",
+        responsibilities: ["Story design", "visual design", "data analysis", "data visualization design & development", "web development"]
     },
     {
         title: "The Dark Divide",
@@ -43,7 +46,8 @@ export const projects: Project[] = [
         technologies: ["QGIS", "Google Earth Engine", "R", "python", "d3", "Svelte"],
         hashtags: ["#dataviz", "#dataanalysis", "#maps", "#research", "#investigation", "#projectmanagement"],
         link: "https://mindalynworld.github.io/portfolio/projects/south-africa-energy",
-        desc_short: "Using nighttime lights to study disparities in energy access amidst the energy crisis in South Africa."
+        desc_short: "Investigative research using nighttime lights to study disparities in energy access amidst the energy crisis in South Africa.",
+        responsibilities: ["Everything"]
     },
     {
         title: "Gender, Commuting, and Belonging",
@@ -57,7 +61,8 @@ export const projects: Project[] = [
         technologies: ["QGIS", "R"],
         hashtags: ["#dataviz", "#maps", "#investigation", "datawrangling", "#dataanalysis"],
         link: "https://gcro.ac.za/outputs/map-of-the-month/detail/extended-urbanisation-gcr-gender-commuting-migration-and-belonging/",
-        desc_short: "Reporting on Gender disparities in commuting patterns in South Africa. See map visualizations in the first section titled “Male-female Journeys to work” (data wrangling, analysis, and visualizations done by me)."
+        desc_short: "Report on gender disparities in commuting patterns in South Africa. Responsible for map visualizations in “Male-female Journeys to work” section.",
+        responsibilities: ["Data wrangling", "data analysis", "data visualization design & development"]
     },
     {
         title: "My Year in Data 2025",
@@ -71,7 +76,9 @@ export const projects: Project[] = [
         technologies: ["d3", "R", "Figma", "Google Sheets"],
         hashtags: ["dataviz", "design", "storytelling", "personalproject"],
         link: "https://www.instagram.com/p/DWHthMBkuuh/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-        desc_short: "What could I learn from exploring data about my own life? In 2025, I started collecting data about my daily habits (exercise, sleep, emotions, etc.) to see if I could find any interesting patterns."
+        desc_short: "What could I learn from exploring data about my own life? In 2025, I started collecting data about my daily habits (exercise, sleep, emotions, etc.) to see if I could find any interesting patterns.",
+        responsibilities: ["Everything"],
+        internalSlug: "project-my-year-in-data"
     },
     {
         title: "Project Qute",
@@ -85,7 +92,8 @@ export const projects: Project[] = [
         technologies: ["Google suite"],
         hashtags: ["#projectmanagement", "#STEMEducation"],
         link: "https://iqim.caltech.edu/quantime/",
-        desc_short: "Project Qute was a collaboration between Google, Caltech and Quantum Realm Games to introduce quantum information science to high school students using the game of chess. As a project manager, I led the education team to develop a curriculum for an in-classroom workshop. It was delivered to over 10,000 students across the U.S. as a part of the U.S. National Quantum Initiative by the White House."
+        desc_short: "Project Qute was a collaboration between Google, Caltech and Quantum Realm Games to introduce quantum information science to high school students using the game of chess. As a project manager, I led the education team to develop a curriculum for an in-classroom workshop. It was delivered to over 10,000 students across the U.S. as a part of the U.S. National Quantum Initiative by the White House.",
+        responsibilities: ["Project management"]
     },
     {
         title: "Fueling Flames: 40 years of daily temperatures in San Francisco",
@@ -99,7 +107,8 @@ export const projects: Project[] = [
         technologies: ["d3", "R"],
         hashtags: ["dataviz", "art", "storytelling", "personalproject"],
         link: "https://mindalynworld.github.io/portfolio/projects/temperatures",
-        desc_short: "How have the daily average temperatures in San Francisco changed over 40 years. A visual timelapse of calendar heatmaps from 1980 to 2019."
+        desc_short: "How have the daily average temperatures in San Francisco changed over 40 years. A visual timelapse of calendar heatmaps from 1980 to 2019.",
+        responsibilities: ["Everything"]
     },
     {
         title: "The Role of Mental Illness in Fatal Police Shootings",
@@ -113,7 +122,8 @@ export const projects: Project[] = [
         technologies: ["Datawrapper", "R"],
         hashtags: ["dataviz", "dataanalysis", "investigation", "personalproject"],
         link: "https://mindalynworld.github.io/portfolio/projects/police-shootings",
-        desc_short: "Should you call the police to de-escalate your mental health emergency? The data says no. This piece is a work in progress, showing an initial exploration of the Washington Post's police shootings database using various data visualizations to investigate the role mental illness plays in these shootings."
+        desc_short: "Should you call the police to de-escalate your mental health emergency? The data says no. This piece is a work in progress, showing an initial exploration of the Washington Post's police shootings database using various data visualizations to investigate the role mental illness plays in these shootings.",
+        responsibilities: ["Everything"]
     },
 
 ]

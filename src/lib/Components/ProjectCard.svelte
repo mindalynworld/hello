@@ -2,8 +2,20 @@
     import { resolve } from '$app/paths';
     import type { Project } from "../../../static/data/projects"
 	import Button from './Button.svelte';
+    import { handleNavigate } from '$lib/Helpers/helpers';
 
     let { project } : { project: Project } = $props();
+
+
+
+    function navToProject(project: Project) {
+        if (project.internalSlug) {
+            handleNavigate(project.internalSlug);
+        } else {
+            window.open(project.link, '_blank');
+        }
+        
+    }
 
 </script>
 
@@ -25,23 +37,29 @@
     <p class="metadata">
         <b>Partners: </b> 
         {#each project.clients as client, i}
-            <a href={project.clientLinks[i]} target="_blank" rel="noopener noreferrer">{client}</a> &nbsp;
+            <a href={project.clientLinks[i]} target="_blank" rel="noopener noreferrer">{client}</a>{#if i != project.clients.length - 1}, &nbsp; {/if}
         {/each}
     </p>
     <p class="metadata">
         <b>Tools: </b>
-        {#each project.technologies as technology}
-            {technology} &nbsp;
+        {#each project.technologies as technology, i}
+            {technology}{#if i != project.technologies.length - 1}, &nbsp; {/if}
         {/each}
     </p>
-    <p class="hashtags">
+    <p class="metadata">
+        <b>Responsibilities: </b>
+        {#each project.responsibilities as responsibility, i}
+            {responsibility}{#if i != project.responsibilities.length - 1}, &nbsp; {/if}
+        {/each}
+    </p>
+    <!-- <p class="hashtags">
         {#each project.hashtags as hashtag}
             {hashtag} &nbsp;
         {/each}
-    </p>
+    </p> -->
 
     <div class="btn-container">
-        <Button theme="contrast" label={"Go to project →"} clickHandler={() => window.open(project.link, '_blank')}></Button>
+        <Button theme="contrast" label={"Go to project →"} clickHandler={() => navToProject(project)}></Button>
     </div>
     
 </div>

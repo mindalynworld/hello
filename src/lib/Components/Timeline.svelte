@@ -352,6 +352,7 @@
 
     .vis-wrapper {
         border: solid 1px black;
+        border-radius: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -441,7 +442,6 @@
         display: flex;
         max-width: -webkit-fill-available;
         justify-content: flex-start;
-        /* width: 90%; */
         margin: 0 1.5rem 1.5rem;
         color: var(--primary-text-color);
         flex-wrap: wrap;

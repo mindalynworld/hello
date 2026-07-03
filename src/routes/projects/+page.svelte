@@ -1,10 +1,16 @@
 <script>
 	import ProjectCard from "$lib/Components/ProjectCard.svelte";
     import { projects } from "../../../static/data/projects";
-
+    import { handleNavigate } from "$lib/Helpers/helpers";
+    import Button from "$lib/Components/Button.svelte";
 </script>
 
 <div class="page">
+
+    <div class="btn-container">
+        <Button theme="contrast" border={false} label={"← back to home"} clickHandler={handleNavigate("about")}></Button>
+    </div>
+
     <h1>projects</h1>
 
     <div class="card-container">
