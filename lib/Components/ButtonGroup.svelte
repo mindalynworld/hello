@@ -12,7 +12,7 @@
 
 <div class="toggle-menu">
   {#each options as option}
-    <Button theme="primary" active={selectedOption === option} label={option} clickHandler={() => selectOption(option)}></Button>
+    <Button theme="primary" active={selectedOption === option} border={false} label={option} clickHandler={() => selectOption(option)}></Button>
   {/each}
 </div>
 

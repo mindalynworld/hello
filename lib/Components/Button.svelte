@@ -1,10 +1,15 @@
 <script lang="ts">
-    let { theme, active=false, label, clickHandler } = $props();
+    let { theme, 
+        active=false, 
+        border=true, 
+        label,
+        clickHandler } = $props();
 
 </script>
 
 <button class={theme}
     class:active={active}
+    class:borderless={!border}
     onclick={clickHandler}
 >
     {label}
@@ -17,7 +22,7 @@
         border-width: 2px;
         border-radius: var(--border-radius);
         background-color: transparent;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         cursor: pointer;
 
@@ -37,13 +42,34 @@
             background-color: var(--primary);
             color: var(--primary-contrast);
             border-color: var(--primary);
+
+            &.borderless {
+                text-decoration: underline;
+                background: none;
+                color: var(--primary);
+            }
         }
 
          :global(&.contrast) {
             background-color: var(--primary-contrast);
             color: var(--primary);
             border-color: var(--primary-contrast);
+
+            &.borderless {
+                text-decoration: underline;
+                background: none;
+                color: var(--primary-contrast);
+            }
         }
     }
+
+    button.borderless {
+        border: none;
+    }
+
+    /* button.borderless:hover {
+        text-decoration: underline;
+        background: none;
+    } */
 
 </style>

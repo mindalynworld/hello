@@ -8,7 +8,7 @@
 
 	let { children } = $props();
 
-	const pages: string[] = ['about', 'projects', 'resume-explorer']
+	const pages: string[] = ['about', 'projects']
 
 	let selectedOption = $state(pages[0]);
 
@@ -22,7 +22,9 @@
 <main>
 	<div class="header"> 
 		<div class="title">
-			<Logo></Logo>
+			<button class="home-btn" aria-label="home" onclick={() => handleNavigate("about")}>
+				<Logo></Logo>
+			</button>
 			<div>
 				<p class="tagline">social impact at the intersection of data, art, & education</p>
 				<p class="contact">
@@ -52,6 +54,12 @@
 			height: 15rem;
 			flex-direction: column;
 		} */
+	}
+
+	.home-btn {
+		background: none;
+		border: none;
+		cursor: pointer;
 	}
 
 	.title {
