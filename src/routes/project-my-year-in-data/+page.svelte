@@ -1,6 +1,8 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { resolve } from "$app/paths";
+    import { handleNavigate } from '$lib/Helpers/helpers';
+    import Button from '$lib/Components/Button.svelte';
 
     let carousel: HTMLDivElement;
     // let loaded = false;
@@ -92,6 +94,10 @@
 </script>
 
 <div class="page">
+    <div class="btn-container">
+        <Button theme="contrast" border={false} label={"← back to projects"} clickHandler={handleNavigate("projects")}></Button>
+    </div>
+
     <h1>My Year in Data 2025</h1>
 
     <div class="intro">

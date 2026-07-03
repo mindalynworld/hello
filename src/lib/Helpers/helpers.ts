@@ -1,6 +1,7 @@
 import type { Project } from "../../../static/data/projects";
 import { resolve } from '$app/paths';
 import { goto } from "$app/navigation";
+import { browser } from '$app/environment';
 
 /* COLOR DEFINITIONS (TODO: maybe this can exist in styles and just add attr class?) or make a dictionary*/
 const primary_color = "#454545";
@@ -74,5 +75,7 @@ export function determineColors(project: Project, isSVG: boolean): string { // u
 }
 
 export function handleNavigate(page: string) {
-    goto(resolve('/[slug]', {slug: page})); //checking if this is causing the asynch handler error
+    if (browser) {
+        goto(resolve('/[slug]', {slug: page})); //checking if this is causing the asynch handler error
+    }
 }
