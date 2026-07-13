@@ -8,7 +8,7 @@
 <div class="page">
 
     <div class="btn-container">
-        <Button theme="contrast" border={false} label={"← back to home"} clickHandler={handleNavigate("about")}></Button>
+        <Button theme="contrast" border={false} label={"← back to home"} clickHandler={handleNavigate("home")}></Button>
     </div>
 
     <h1>projects</h1>
@@ -27,7 +27,7 @@
         <h4>Go to:</h4>
             <div class="nav-options">
                 <a class="option-box" href="#header">Back to top</a>
-                <button class="option-box" onclick={() => handleNavigate("about")}>Home</button>
+                <button class="option-box" onclick={() => handleNavigate("home")}>Home</button>
                 <!-- <div class="option-box">Projects</div>
                 <div class="option-box">Contact</div> -->
             </div>
