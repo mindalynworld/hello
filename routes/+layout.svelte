@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-    import { resolve } from '$app/paths';
 	import ButtonGroup from '$lib/Components/ButtonGroup.svelte';
 	import { afterNavigate, goto } from "$app/navigation";
 	import Logo from '$lib/Components/Logo.svelte';
@@ -15,16 +14,16 @@
 
 	// $effect(() => handleNavigate(selectedOption))
 
-	afterNavigate((navigation) => {
-		selectedOption = navigation.to?.route.id ? navigation.to?.route.id.slice(1) : "about";
-	})
+	// afterNavigate((navigation) => {
+	// 	selectedOption = navigation.to?.route.id ? navigation.to?.route.id.slice(1) : "about";
+	// })
 
 </script>
 
 <main>
 	<div class="header" id="header"> 
 		<div class="title">
-			<button class="home-btn" aria-label="home" onclick={() => handleNavigate("about")}>
+			<button class="home-btn" aria-label="home" onclick={() => handleNavigate("home")}>
 				<Logo></Logo>
 			</button>
 			<div>

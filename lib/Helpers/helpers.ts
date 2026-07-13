@@ -76,6 +76,11 @@ export function determineColors(project: Project, isSVG: boolean): string { // u
 
 export function handleNavigate(page: string) {
     if (browser) {
-        goto(resolve('/[slug]', {slug: page})); //checking if this is causing the asynch handler error
+        if (page == "home") {
+            goto('/');
+        }
+        else {
+            goto(resolve('/[slug]', {slug: page})); //checking if this is causing the asynch handler error
+        }
     }
 }
