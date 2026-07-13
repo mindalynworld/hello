@@ -22,6 +22,16 @@
             {/each}
         </div>
     </div>
+
+    <div class="next-nav">
+        <h4>Go to:</h4>
+            <div class="nav-options">
+                <a class="option-box" href="#header">Back to top</a>
+                <button class="option-box" onclick={() => handleNavigate("about")}>Home</button>
+                <!-- <div class="option-box">Projects</div>
+                <div class="option-box">Contact</div> -->
+            </div>
+    </div>
 </div>
 
 <style>
@@ -47,5 +57,53 @@
     .card {
         margin: 1rem;
         justify-self: center;
+    }
+
+    .nav-options {
+        display: flex;
+        justify-content: center;
+        max-width: 900px;
+    }
+
+    .next-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    .option-box {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+        border: solid 2px;
+        border-radius: 5px;
+        margin: 0.5rem;
+        padding: 1rem;
+
+        text-decoration: none;
+        background: none; 
+        border-color: var(--secondary-color);
+        color: var(--secondary-color);
+
+        font-weight: 700;
+        font-size: 16px;
+
+        width: 200px;
+        min-height: 10px;
+    
+        @media (width <= 800px) {
+            width: 125px;
+        }
+    }
+
+    .option-box:hover {
+        background-color: var(--primary-contrast);
+        color: var(--primary);
+        border-color: var(--primary-contrast);
+        cursor: pointer;
     }
 </style>

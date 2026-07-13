@@ -5,6 +5,7 @@
 	import { afterNavigate, goto } from "$app/navigation";
 	import Logo from '$lib/Components/Logo.svelte';
 	import { handleNavigate } from '$lib/Helpers/helpers';
+	// import { page } from '$app/state';
 
 	let { children } = $props();
 
@@ -19,8 +20,9 @@
 	})
 
 </script>
+
 <main>
-	<div class="header"> 
+	<div class="header" id="header"> 
 		<div class="title">
 			<button class="home-btn" aria-label="home" onclick={() => handleNavigate("about")}>
 				<Logo></Logo>
@@ -28,7 +30,7 @@
 			<div>
 				<p class="tagline">social impact at the intersection of data, art, & education</p>
 				<p class="contact">
-					mindylynnng@gmail.com //&nbsp;<a href="https://www.linkedin.com/in/mindylynnng/">LinkedIn</a>
+					<a href="mailto:mindylynnng@gmail.com">mindylynnng@gmail.com</a>&nbsp;//&nbsp;<a href="https://www.linkedin.com/in/mindylynnng/">LinkedIn</a>
 				</p>
 			</div>
 		</div>
