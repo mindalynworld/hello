@@ -300,9 +300,9 @@
                         <circle class="legend-symbol" cx="18" cy="8" r="7" fill="rgba(245, 176, 49, 0.75)"></circle>
                             <text class="legend-text" x="30" y="13">Data & Technology</text>
                         <circle class="legend-symbol" cx="18" cy="28" r="7" fill="rgba(183, 224, 146, 0.75)"></circle>
-                            <text class="legend-text" x="30" y="33">Education & Community Building</text>
+                            <text class="legend-text" x="30" y="33">Education</text>
                         <circle class="legend-symbol" cx="18" cy="48" r="7" fill="rgba(171, 145, 242, 0.75)"></circle>
-                            <text class="legend-text" x="30" y="53">Arts & Storytelling</text>
+                            <text class="legend-text" x="30" y="53">Art & Design</text>
                     </svg>
                 </div>
 

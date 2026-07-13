@@ -47,7 +47,7 @@ export const projects: Project[] = [
         hashtags: ["#dataviz", "#dataanalysis", "#maps", "#research", "#investigation", "#projectmanagement"],
         link: "https://mindalynworld.github.io/portfolio/projects/south-africa-energy",
         desc_short: "Investigative research using nighttime lights to study disparities in energy access amidst the energy crisis in South Africa.",
-        responsibilities: ["Everything"]
+        responsibilities: ["Research design", "data wrangling & analysis", "data visualization design & development", "web development", "writing"]
     },
     {
         title: "Gender, Commuting, and Belonging",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
         hashtags: ["#dataviz", "#maps", "#investigation", "datawrangling", "#dataanalysis"],
         link: "https://gcro.ac.za/outputs/map-of-the-month/detail/extended-urbanisation-gcr-gender-commuting-migration-and-belonging/",
         desc_short: "Report on gender disparities in commuting patterns in South Africa. Responsible for map visualizations in “Male-female Journeys to work” section.",
-        responsibilities: ["Data wrangling", "data analysis", "data visualization design & development"]
+        responsibilities: ["Data wrangling & analysis", "data visualization design & development"]
     },
     {
         title: "My Year in Data 2025",
@@ -81,21 +81,6 @@ export const projects: Project[] = [
         internalSlug: "project-my-year-in-data"
     },
     {
-        title: "Project Qute",
-        imgSrc: "/images/qute_cover.png",
-        clients: ["CalTech", "Google Quantum AI", "Quantum Realm Games"],
-        clientLinks: ["https://www.caltech.edu/", "https://quantumai.google/", "https://chess.quantumnative.io/#/"],
-        date: "April 2022",
-        arts: false,
-        tech: true,
-        edu: true,
-        technologies: ["Google suite"],
-        hashtags: ["#projectmanagement", "#STEMEducation"],
-        link: "https://iqim.caltech.edu/quantime/",
-        desc_short: "Project Qute was a collaboration between Google, Caltech and Quantum Realm Games to introduce quantum information science to high school students using the game of chess. As a project manager, I led the education team to develop a curriculum for an in-classroom workshop. It was delivered to over 10,000 students across the U.S. as a part of the U.S. National Quantum Initiative by the White House.",
-        responsibilities: ["Project management"]
-    },
-    {
         title: "Fueling Flames: 40 years of daily temperatures in San Francisco",
         imgSrc: "/images/temps_cover.png",
         clients: ["Independent"],
@@ -109,6 +94,21 @@ export const projects: Project[] = [
         link: "https://mindalynworld.github.io/portfolio/projects/temperatures",
         desc_short: "How have the daily average temperatures in San Francisco changed over 40 years. A visual timelapse of calendar heatmaps from 1980 to 2019.",
         responsibilities: ["Everything"]
+    },
+    {
+        title: "Project Qute",
+        imgSrc: "/images/qute_cover.png",
+        clients: ["CalTech", "Google Quantum AI", "Quantum Realm Games"],
+        clientLinks: ["https://www.caltech.edu/", "https://quantumai.google/", "https://chess.quantumnative.io/#/"],
+        date: "April 2022",
+        arts: false,
+        tech: true,
+        edu: true,
+        technologies: ["Google suite"],
+        hashtags: ["#projectmanagement", "#STEMEducation"],
+        link: "https://iqim.caltech.edu/quantime/",
+        desc_short: "Project Qute was a collaboration between Google, Caltech and Quantum Realm Games to introduce quantum information science to high school students using the game of chess. As a project manager, I led the education team to develop a curriculum for an in-classroom workshop. It was delivered to over 10,000 students across the U.S. as a part of the U.S. National Quantum Initiative by the White House.",
+        responsibilities: ["Project management"]
     },
     {
         title: "The Role of Mental Illness in Fatal Police Shootings",
