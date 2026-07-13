@@ -120,8 +120,10 @@
             <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/slide4.PNG")} alt="slide 4"><h2>→</h2></div>
             <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/slide5.PNG")} alt="slide 5"><h2>→</h2></div>
             <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/slide6.PNG")} alt="slide 6"><h2>→</h2></div>
-            <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/slide7.PNG")} alt="slide 7"><h2>→</h2></div>
-            <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/slide8.PNG")} alt="slide 8"><h2>→</h2></div>
+            <!-- <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/slide7.PNG")} alt="slide 7"><h2>→</h2></div>
+            <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/slide8.PNG")} alt="slide 8"><h2>→</h2></div> -->
+
+            <div class="grid-cell" id="feature-item"><img src={resolve("/images/projects/my-year-in-data/top50full.png")} alt="slide 8 & 9"><h2>→</h2></div>
             <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/slide9.PNG")} alt="slide 9"><h2>→</h2></div>
             <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/slide10.PNG")} alt="slide 10"><h2>→</h2></div>
             <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/slide11.PNG")} alt="slide 11"><h2>→</h2></div>
@@ -152,7 +154,7 @@
         <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/sketches/emotracker.jpg")} alt="sketches 1"></div>
         <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/sketches/stream.jpg")} alt="sketches 2"></div>
         <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/sketches/sleep.jpg")} alt="sketches 3"></div>
-        <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/sketches/slide13.PNG")} alt="sketches 4"></div>
+        <div class="grid-cell"><img src={resolve("/images/projects/my-year-in-data/sketches/slide13.jpg")} alt="sketches 4"></div>
     </div>
 
     <!-- <div>
@@ -177,15 +179,19 @@
     }
 
     .grid {
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 3rem;
-        /* flex-wrap: wrap;
-        justify-content: center; flex-start; */
+        */
+        display: flex;
+        gap: 3rem; 
+        flex-wrap: wrap;
+        justify-content: center; /* flex-start; */
     }
+
     .grid-cell {
         display: flex;
         align-items: center;
+        width: 350px;
 
         h2 {
             margin-left: 0.5rem;
@@ -201,6 +207,11 @@
         box-sizing: border-box;
     }
 
+    #feature-item {
+        /* grid-column: span 2; */
+        flex-grow: 2;
+    }
+/* 
     :global(.flickity-viewport) {
         height: 450px !important;
     }
@@ -228,7 +239,6 @@
 
     .carousel {
         width: 90%;
-        /* counter-increment: gallery-cell; */
     }
 
     .carousel-cell {
@@ -239,5 +249,5 @@
         @media (max-width: 480px) {
             width: 325px;
 		}
-    }
+    } */
 </style>
