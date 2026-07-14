@@ -12,15 +12,26 @@ export interface Project {
     hashtags: string[];
     link: string;
     desc_short: string;
-    desc_long?: string;
+    desc_long?: string[];
     internalSlug?: string;
+    showExternalNav?: boolean;
+}
+
+export interface ImageSet {
+    images: {
+        URL: string;
+        alt: string;
+        feature?: boolean;
+    }[];
+    showArrows: boolean;
+    squares: boolean;
 }
 
 // export type Category = "ARTS" | "DATA/TECH" | "EDUCATION";
 
 export const projects: Project[] = [
     {
-        title: "Lollapalooza Education Arts Fund",
+        title: "The Lollapalooza Arts Education Fund",
         imgSrc: "/images/lolla_cover.png",
         clients: ["Ingenuity", "Lollapalooza"],
         clientLinks: ["https://www.ingenuity-inc.org/", "https://www.lollapalooza.com/"],
@@ -32,7 +43,14 @@ export const projects: Project[] = [
         hashtags: ["#dataviz", "#dataanalysis", "#scrollytelling", "#interactive", "#animations", "#webdev", "#projectmanagement", "#visualdesign", "#maps"],
         link: "https://ingenuity-chicago.github.io/laef_impact/",
         desc_short: "A long-form, interactive and animated scrollytelling piece visualizing the impact of Lollapalooza's $2.2 million investment in arts education in Chicago Public Schools.",
-        responsibilities: ["Story design", "UI/UX design", "data analysis", "data visualization design & development", "web development"]
+        desc_long: [
+            `<b><i>What is possible when every students has access to high-quality arts education?</i><b>`,
+            "Lollapalooza, one of the largest music festivals in the US, believes that every student deserves access to the arts. In 2021, they partnered with Ingenuity, the leading arts education data authority in Chicago, to invest $2.2 million in arts education in Chicago Public Schools (CPS).",
+            "Ingenuity wanted to do a long-form, data-driven scrollytelling piece to visualize the impact of this investment. As the only data visualization specialist at the company, I was given full ownership of this project. I explored & analyzed the data, sculpted the narrative arc, designed the visualizations, and developed the web app. Having more context about the partnership, the client took the lead on writing the copy-text."
+        ],
+        responsibilities: ["Story design", "UI/UX design", "data analysis", "data visualization design & development", "web development"],
+        internalSlug: "project-lollapalooza",
+        showExternalNav: true
     },
     {
         title: "The Dark Divide",
