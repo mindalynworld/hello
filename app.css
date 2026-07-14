@@ -29,4 +29,8 @@
     button {
         font-family: var(--font-family);
     }
+
+    img {
+        border-radius: 15px;
+    }
 }

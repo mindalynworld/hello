@@ -6,15 +6,12 @@
 
     let { project } : { project: Project } = $props();
 
-
-
-    function navToProject(project: Project) {
-        if (project.internalSlug) {
+    function navToProject(project: Project, internal: boolean) {
+        if (internal) {
             handleNavigate(project.internalSlug);
         } else {
             window.open(project.link, '_blank');
         }
-        
     }
 
 </script>
@@ -59,7 +56,7 @@
     </p> -->
 
     <div class="btn-container">
-        <Button theme="contrast" label={"Go to project →"} clickHandler={() => navToProject(project)}></Button>
+        <Button theme="contrast" label={"Go to project →"} clickHandler={() => navToProject(project, project.internalSlug ? true : false)}></Button>
     </div>
     
 </div>
