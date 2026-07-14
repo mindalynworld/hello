@@ -28,11 +28,11 @@ export const projects: Project[] = [
         arts: true,
         tech: true,
         edu: true,
-        technologies: ["d3", "Svelte", "R", "git", "GIS", "Figma", "Github Pages", "Google Analytics"],
+        technologies: ["d3", "Svelte", "R", "GIS", "Figma", "HTML/CSS/Typescript", "Github Pages", "Google Analytics"],
         hashtags: ["#dataviz", "#dataanalysis", "#scrollytelling", "#interactive", "#animations", "#webdev", "#projectmanagement", "#visualdesign", "#maps"],
         link: "https://ingenuity-chicago.github.io/laef_impact/",
-        desc_short: "Visualizing the impact of Lollapalooza's $2.2 million investment in arts education in Chicago Public Schools through long-form, interactive and animated scrollytelling.",
-        responsibilities: ["Story design", "visual design", "data analysis", "data visualization design & development", "web development"]
+        desc_short: "A long-form, interactive and animated scrollytelling piece visualizing the impact of Lollapalooza's $2.2 million investment in arts education in Chicago Public Schools.",
+        responsibilities: ["Story design", "UI/UX design", "data analysis", "data visualization design & development", "web development"]
     },
     {
         title: "The Dark Divide",

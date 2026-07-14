@@ -91,7 +91,7 @@
                 </p>
                 <p>
                 Still, I don't regret any part of my journey. During this time I developed so many technical and leadership skills that now empower me to create the things that matter to me. 
-                As I reshape my career as a freelancer, I'm finding previously unimaginable ways to weave my skills and passions together in ways that feel authentic, exciting, and balanced again.
+                As I reshape my career as a freelancer, I'm finding that my strongest work is emerging when I weave together my skills and passions in ways that feel authentic, exciting, and balanced again.
                 </p>
                 <p>
                     <span class="emphasize-text"><i>Let's work together!</i></span>
