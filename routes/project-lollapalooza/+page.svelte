@@ -5,7 +5,6 @@
 	import ImageGrid from "$lib/Components/ImageGrid.svelte";
     import { projects, type ImageSet } from "../../../static/data/projects";
 	import ProjectDetails from "$lib/Components/ProjectDetails.svelte";
-    // import { projects } from "../../../static/data/projects";
     
     const projectStills: ImageSet = {
 		images: [
@@ -88,7 +87,7 @@
         </p>
     </div>
 
-    <h2>Sketches & Design</h2>
+    <h2>From Sketches to Code</h2>
 
     <ImageGrid set={projectSketches}/>
 </div>

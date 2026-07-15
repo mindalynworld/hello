@@ -16,9 +16,11 @@
     <div class="card-container">
         <div class="cards">
             {#each projects as project}
-                <div class="card">
-                    <ProjectCard project={project}></ProjectCard>
-                </div>
+                {#if !project.exclude}
+                    <div class="card">
+                        <ProjectCard project={project}></ProjectCard>
+                    </div>
+                {/if}
             {/each}
         </div>
     </div>
@@ -48,7 +50,7 @@
 
     .cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
         gap: 16px;
         /* flex-wrap: wrap;
         justify-content: center; flex-start; */
