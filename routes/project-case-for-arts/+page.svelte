@@ -45,7 +45,7 @@
         </p>
     </div>
 
-    <h2>Mockups and Drafts</h2>
+    <h2>Designing and Drafting</h2>
 
     <ImageGrid set={projectSketches}/>
     <br>
