@@ -50,7 +50,7 @@ export const projects: Project[] = [
             "Ingenuity wanted to do a long-form, data-driven scrollytelling piece to visualize the impact of this investment. As the only data visualization specialist at the company, I was given full ownership of this project. I explored & analyzed the data, sculpted the narrative arc, designed the visualizations, and developed the web app. Having more context about the partnership, the client took the lead on writing the copy-text."
         ],
         responsibilities: ["Story design", "UI/UX design", "data analysis", "data visualization design & development", "web development"],
-        internalSlug: "project-lollapalooza",
+        internalSlug: "project-lollapalooza#top",
         showExternalNav: true
     },
     {
@@ -67,8 +67,10 @@ export const projects: Project[] = [
         link: "",
         desc_short: "A static one-page infographic poster showing the impact of arts education on the academic achievement outcomes of students in Chicago Public Schools.",
         desc_long: [
-            "A work in progress of a static one-page infographic poster showing the relationship between access to arts education and academic outcomes of students in Chicago Public Schools. Ingenuity will use this in both print and digital to advocate for arts-supportive policy and fundraising.",
-            "<i>To be published end of July 2026.</i>"
+            `<b><i>How does access to arts education affect student engagement and academic outcomes?</i><b>`,
+            "A work in progress of a static one-page infographic poster showing the relationship between arts education and academic outcomes of students in Chicago Public Schools. It will be used to advocate for arts-supportive policy and fundraising.", 
+            "Ingenuity is a nonprofit organization based in Chicago, dedicated to ensuring all students in Chicago Public Schools (CPS) have access to high-quality arts education. Ingenuity is the leading arts education data authority in Chicago, collecting and analyzing CPS school-level data to influence sector-wide decision-making, support arts-supportive policies, and improve resource distribution.",
+            "<i>To be published in print and digital at the end of July 2026.</i>"
         ],
         responsibilities: ["Story design", "visual design", "data analysis", "data visualization design & development"],
         internalSlug: "project-case-for-arts",
@@ -123,7 +125,7 @@ export const projects: Project[] = [
             "These are some static visualizations of initial findings that I created for an Instagram carousel post. Interestingly, the process of collecting this info has already made me much more aware of my physical and emotional state, which has actually helped me regulate them better."
         ],
         responsibilities: ["Everything"],
-        internalSlug: "project-my-year-in-data"
+        internalSlug: "project-my-year-in-data#top"
     },
     {
         title: "Fueling Flames: 40 years of daily temperatures in San Francisco",

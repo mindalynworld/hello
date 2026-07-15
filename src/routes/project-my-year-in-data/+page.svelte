@@ -9,30 +9,12 @@
     
 </script>
 
-<div class="page">
+<div class="page" id="top">
     <div class="btn-container">
-        <Button theme="contrast" border={false} label={"← back to projects"} clickHandler={handleNavigate("projects")}></Button>
+        <Button theme="contrast" border={false} label={"← back to projects"} clickHandler={handleNavigate("projects#top")}></Button>
     </div>
 
     <ProjectDetails project={projects[4]}></ProjectDetails>
-
-    <!-- <h1>My Year in Data 2025</h1>
-
-    <div class="info">
-        <div class="intro">
-            <p>
-                In 2025, I started collecting data about my daily habits (exercise, sleep, emotions, etc.). As a data visualization developer, I was curious... <b><i>what could I learn from looking at data about my own life?</i></b>
-                I've had pretty bad insomnia and IBS for the past few years, so I wanted to see if any patterns existed between my symptoms and other lifestyle habits.
-            </p>
-            <p>
-                These are some static visualizations of initial findings that I created for an Instagram carousel post. Interestingly, the process of collecting this info has already made me much more aware of my physical and emotional state, which has actually helped me regulate them better.
-            </p>
-        </div>
-        <div class="metadata">
-            <b>Date</b> March 2026 <br>
-            <b>Tools:</b> R, Figma, d3.js
-        </div>
-    </div> -->
 
     <div class="container">
         <!-- {#if loaded} -->

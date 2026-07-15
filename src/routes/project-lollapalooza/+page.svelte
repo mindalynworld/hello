@@ -54,9 +54,9 @@
 	}
 </script>
 
-<div class="page">
+<div class="page" id="top">
     <div class="btn-container">
-        <Button theme="contrast" border={false} label={"← back to projects"} clickHandler={handleNavigate("projects")}></Button>
+        <Button theme="contrast" border={false} label={"← back to projects"} clickHandler={handleNavigate("projects#top")}></Button>
     </div>
 
     <ProjectDetails project={projects[0]}></ProjectDetails>

@@ -5,7 +5,7 @@
     import Button from "$lib/Components/Button.svelte";
 </script>
 
-<div class="page">
+<div class="page" id="top">
 
     <div class="btn-container">
         <Button theme="contrast" border={false} label={"← back to home"} clickHandler={handleNavigate("home")}></Button>

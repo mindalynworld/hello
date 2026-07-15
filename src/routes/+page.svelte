@@ -35,7 +35,7 @@
                 <div class="nav-options">
                     <!-- <button class="option-box" onclick={() => handleClick("resume")}>Interactive Resume Explorer</button> -->
                     <a class="option-box" href="#resume-explorer">Interactive Resume Explorer</a>
-                    <button class="option-box" onclick={() => handleNavigate("projects")}>Projects</button>
+                    <button class="option-box" onclick={() => handleNavigate("projects#top")}>Projects</button>
                     <!-- <div class="option-box">Projects</div>
                     <div class="option-box">Contact</div> -->
                 </div>
@@ -104,7 +104,7 @@
             <h4>Go to:</h4>
                 <div class="nav-options">
                     <a class="option-box" href="#header">Back to top</a>
-                    <button class="option-box" onclick={() => handleNavigate("projects")}>Projects</button>
+                    <button class="option-box" onclick={() => handleNavigate("projects#top")}>Projects</button>
                     <!-- <div class="option-box">Projects</div>
                     <div class="option-box">Contact</div> -->
                 </div>

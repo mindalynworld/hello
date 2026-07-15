@@ -27,8 +27,8 @@
 </script>
 
 <div class="page">
-    <div class="btn-container">
-        <Button theme="contrast" border={false} label={"← back to projects"} clickHandler={handleNavigate("projects")}></Button>
+    <div class="btn-container" id="top">
+        <Button theme="contrast" border={false} label={"← back to projects"} clickHandler={handleNavigate("projects#top")}></Button>
     </div>
 
     <ProjectDetails project={projects[1]}></ProjectDetails>
