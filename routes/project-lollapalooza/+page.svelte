@@ -52,6 +52,8 @@
 		showArrows: false,
         squares: false
 	}
+
+    let project = projects[0]
 </script>
 
 <div class="page" id="top">
@@ -59,7 +61,7 @@
         <Button theme="contrast" border={false} label={"← back to projects"} clickHandler={handleNavigate("projects#top")}></Button>
     </div>
 
-    <ProjectDetails project={projects[0]}></ProjectDetails>
+    <ProjectDetails project={project}></ProjectDetails>
 
     <div class="img-container">
         <div class="cover-img-container">
@@ -85,6 +87,10 @@
         <p>
             This was a very iterative process that involved weekly check-ins and feedback rounds with the client. To keep the process smooth and rolling forward, I would start by designing on pen-and-paper sketches and mock-ups in Figma before putting anything in code. See below.
         </p>
+    </div>
+
+    <div class="btn-container" id="external-nav">
+        <Button theme="contrast" label={"See the full story →"} clickHandler={() => window.open(project.link, '_blank')}></Button>
     </div>
 
     <h2>From Sketches to Code</h2>
@@ -129,6 +135,12 @@
     }
 
     .process-text {
+        margin: 1rem 3rem 3rem;
+    }
+
+    .btn-container#external-nav {
+        display: flex;
+        justify-content: end;
         margin: 1rem 3rem 3rem;
     }
 </style>
