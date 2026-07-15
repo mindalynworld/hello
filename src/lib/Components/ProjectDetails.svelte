@@ -25,7 +25,7 @@
     </div>
     <div class="metadata-container">
         <p class="metadata">
-            <b>Date</b> {project.date}
+            <b>Date: </b> {project.date}
         </p>
         <p class="metadata">
         <b>Partners: </b> 
@@ -48,7 +48,7 @@
 
         {#if project.showExternalNav}
         <div class="btn-container">
-            <Button theme="contrast" label={"See the story →"} clickHandler={() => navToProject(project, false)}></Button>
+            <Button theme="contrast" label={"See the full story →"} clickHandler={() => navToProject(project, false)}></Button>
         </div>
         {/if}
     </div> 

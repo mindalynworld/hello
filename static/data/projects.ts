@@ -15,6 +15,7 @@ export interface Project {
     desc_long?: string[];
     internalSlug?: string;
     showExternalNav?: boolean;
+    exclude?: boolean;
 }
 
 export interface ImageSet {
@@ -51,6 +52,28 @@ export const projects: Project[] = [
         responsibilities: ["Story design", "UI/UX design", "data analysis", "data visualization design & development", "web development"],
         internalSlug: "project-lollapalooza",
         showExternalNav: true
+    },
+    {
+        title: "Case for the Arts",
+        imgSrc: "/images/caseforarts_cover.png",
+        clients: ["Ingenuity"],
+        clientLinks: ["https://www.ingenuity-inc.org/"],
+        date: "July 2026",
+        arts: true,
+        tech: true,
+        edu: true,
+        technologies: ["R", "Figma"],
+        hashtags: ["#dataviz", "informationdesign", "#dataanalysis", "#visualdesign"],
+        link: "",
+        desc_short: "A static one-page infographic poster showing the impact of arts education on the academic achievement outcomes of students in Chicago Public Schools.",
+        desc_long: [
+            "A work in progress of a static one-page infographic poster showing the relationship between access to arts education and academic outcomes of students in Chicago Public Schools. Ingenuity will use this in both print and digital to advocate for arts-supportive policy and fundraising.",
+            "<i>To be published end of July 2026.</i>"
+        ],
+        responsibilities: ["Story design", "visual design", "data analysis", "data visualization design & development"],
+        internalSlug: "project-case-for-arts",
+        showExternalNav: false,
+        exclude: true
     },
     {
         title: "The Dark Divide",
@@ -95,6 +118,10 @@ export const projects: Project[] = [
         hashtags: ["dataviz", "design", "storytelling", "personalproject"],
         link: "https://www.instagram.com/p/DWHthMBkuuh/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
         desc_short: "What could I learn from exploring data about my own life? In 2025, I started collecting data about my daily habits (exercise, sleep, emotions, etc.) to see if I could find any interesting patterns.",
+        desc_long: [
+            "In 2025, I started collecting data about my daily habits (exercise, sleep, emotions, etc.). As a data visualization developer, I was curious... <b><i>what could I learn from looking at data about my own life?</i></b> I've had pretty bad insomnia and IBS for the past few years, so I wanted to see if any patterns existed between my symptoms and other lifestyle habits.",
+            "These are some static visualizations of initial findings that I created for an Instagram carousel post. Interestingly, the process of collecting this info has already made me much more aware of my physical and emotional state, which has actually helped me regulate them better."
+        ],
         responsibilities: ["Everything"],
         internalSlug: "project-my-year-in-data"
     },

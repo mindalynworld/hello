@@ -63,7 +63,7 @@
 
 <style>
     .card {
-        width: 300px;
+        width: 325px;
 
         display: flex;
         flex-direction: column;
@@ -80,6 +80,12 @@
     .thumbnail {
         height: 190px;
         margin: 0 auto 1rem;
+
+        /* width: 100%;             /* Fills the width of its parent container */
+        /* max-width: 300px;        Optional: Limits the maximum size */
+        /* aspect-ratio: 1 / 1;     Forces the image box to be a perfect square */
+        object-fit: cover;       /* Crops the image to fill the box without distortion */
+        object-position: center;
     }
 
     .description {
