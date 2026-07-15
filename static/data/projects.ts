@@ -45,7 +45,7 @@ export const projects: Project[] = [
         link: "https://ingenuity-chicago.github.io/laef_impact/",
         desc_short: "A long-form, interactive and animated scrollytelling piece visualizing the impact of Lollapalooza's $2.2 million investment in arts education in Chicago Public Schools.",
         desc_long: [
-            `<b><i>What is possible when every students has access to high-quality arts education?</i><b>`,
+            `<b><i>What is possible when every students has access to high-quality arts education?</i></b>`,
             "Lollapalooza, one of the largest music festivals in the US, believes that every student deserves access to the arts. In 2021, they partnered with Ingenuity, the leading arts education data authority in Chicago, to invest $2.2 million in arts education in Chicago Public Schools (CPS).",
             "Ingenuity wanted to do a long-form, data-driven scrollytelling piece to visualize the impact of this investment. As the only data visualization specialist at the company, I was given full ownership of this project. I explored & analyzed the data, sculpted the narrative arc, designed the visualizations, and developed the web app. Having more context about the partnership, the client took the lead on writing the copy-text."
         ],
@@ -67,7 +67,7 @@ export const projects: Project[] = [
         link: "",
         desc_short: "A static one-page infographic poster showing the impact of arts education on the academic achievement outcomes of students in Chicago Public Schools.",
         desc_long: [
-            `<b><i>How does access to arts education affect student engagement and academic outcomes?</i><b>`,
+            `<b><i>How does access to arts education affect student engagement and academic outcomes?</i></b>`,
             "A work in progress of a static one-page infographic poster showing the relationship between arts education and academic outcomes of students in Chicago Public Schools. It will be used to advocate for arts-supportive policy and fundraising.", 
             "Ingenuity is a nonprofit organization based in Chicago, dedicated to ensuring all students in Chicago Public Schools (CPS) have access to high-quality arts education. Ingenuity is the leading arts education data authority in Chicago, collecting and analyzing CPS school-level data to influence sector-wide decision-making, support arts-supportive policies, and improve resource distribution.",
             "<i>To be published in print and digital at the end of July 2026.</i>"
