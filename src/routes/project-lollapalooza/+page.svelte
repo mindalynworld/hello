@@ -135,7 +135,14 @@
     }
 
     .process-text {
+        justify-self: center;
         margin: 1rem 3rem 3rem;
+        max-width: 900px;
+        
+
+        @media (width <= 480px) {
+            margin: 1rem;
+        }
     }
 
     .btn-container#external-nav {

@@ -73,15 +73,14 @@
         margin-right: 2rem;
         
         @media (max-width: 800px) {
-            width: 80%;
+            width: 100%;
 		}
-
     }
 
     .metadata-container {
         width: 30%;
         @media (max-width: 800px) {
-            width: 80%;
+            width: 100%;
 		}
     }
 </style>

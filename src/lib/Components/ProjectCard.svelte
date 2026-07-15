@@ -71,6 +71,10 @@
         border: solid 1px black;
         border-radius: var(--border-radius);
         padding: 25px;
+
+        @media (max-width: 480px) {
+            width: 300px;
+		}
     }
 
     .card > * {
