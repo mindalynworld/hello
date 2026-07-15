@@ -18,9 +18,10 @@
 <div class="info">
     <div class="intro">
             {#each project.desc_long as paragraph_text}
-                <p>
+                <div>
                     {@html paragraph_text}
-                </p>
+                </div>
+                <br>
             {/each}
     </div>
     <div class="metadata-container">

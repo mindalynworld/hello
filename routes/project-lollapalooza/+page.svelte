@@ -129,6 +129,6 @@
     }
 
     .process-text {
-        margin: 1rem;
+        margin: 1rem 3rem 3rem;
     }
 </style>
