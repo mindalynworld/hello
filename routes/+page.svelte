@@ -183,6 +183,10 @@
         .text {
             padding: 3rem;
             flex: 1;
+
+            @media (width <= 480px) {
+                padding: 1rem;
+            }
         }
     }
 
@@ -289,6 +293,10 @@
         padding: 1rem 3rem;
         max-width: 700px;
         justify-self: center;
+
+        @media (width <= 480px) {
+            padding: 1rem 2rem;
+        }
     }
 
     #timeline {
