@@ -47,7 +47,7 @@ export const projects: Project[] = [
         desc_long: [
             `<b><i>What is possible when every students has access to high-quality arts education?</i></b>`,
             "Lollapalooza, one of the largest music festivals in the US, believes that every student deserves access to the arts. In 2021, they partnered with Ingenuity, the leading arts education data authority in Chicago, to invest $2.2 million in arts education in Chicago Public Schools (CPS).",
-            "Ingenuity wanted to do a long-form, data-driven scrollytelling piece to visualize the impact of this investment. As the only data visualization specialist at the company, I was given full ownership of this project. I explored & analyzed the data, sculpted the narrative arc, designed the visualizations, and developed the web app. Having more context about the partnership, the client took the lead on writing the copy-text."
+            "Ingenuity wanted to do a long-form, data-driven <a href='https://ingenuity-chicago.github.io/laef_impact/' target='_blank' rel='noopener noreferrer'>scrollytelling piece</a> to visualize the impact of this investment. As the only data visualization specialist at the company, I was given full ownership of this project. I explored & analyzed the data, sculpted the narrative arc, designed the visualizations, and developed the web app. Having more context about the partnership, the client took the lead on writing the copy-text."
         ],
         responsibilities: ["Story design", "UI/UX design", "data analysis", "data visualization design & development", "web development"],
         internalSlug: "project-lollapalooza#top",
