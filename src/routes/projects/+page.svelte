@@ -52,8 +52,14 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
         gap: 16px;
-        /* flex-wrap: wrap;
-        justify-content: center; flex-start; */
+        /* display: flex;
+        flex-wrap: wrap;
+        justify-content: center;  */
+        /* flex-start; */
+
+        @media (max-width: 480px) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
     }
 
     .card {
