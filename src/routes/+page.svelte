@@ -147,6 +147,10 @@
         flex-direction: column;
         /* justify-content: center; */
         align-items: center;
+
+        @media (width <= 700px) {
+            padding: 1rem;
+        }
     }
 
     .intro {
@@ -295,7 +299,7 @@
         justify-self: center;
 
         @media (width <= 480px) {
-            padding: 1rem 2rem;
+            padding: 1rem 1.5rem;
         }
     }
 
@@ -313,6 +317,11 @@
 
     .next-nav {
         margin-bottom: 3rem;
+        padding: 0 1rem;
+
+        h4 {
+            padding-left: 1rem;
+        }
 
         .option-box {
             width: 200px;
