@@ -65,12 +65,12 @@ export const projects: Project[] = [
         technologies: ["R", "Figma"],
         hashtags: ["#dataviz", "informationdesign", "#dataanalysis", "#visualdesign"],
         link: "",
-        desc_short: "A static one-page infographic poster showing the impact of arts education on the academic achievement outcomes of students in Chicago Public Schools.",
+        desc_short: "A one-page infographic poster showing the impact of arts education on the academic achievement outcomes of students in Chicago Public Schools.",
         desc_long: [
             `<b><i>How does access to arts education affect student engagement and academic outcomes?</i></b>`,
             "A work in progress of a static one-page infographic poster showing the relationship between arts education and academic outcomes of students in Chicago Public Schools. It will be used to advocate for arts-supportive policy and fundraising.", 
             "Ingenuity is a nonprofit organization based in Chicago, dedicated to ensuring all students in Chicago Public Schools (CPS) have access to high-quality arts education. Ingenuity is the leading arts education data authority in Chicago, collecting and analyzing CPS school-level data to influence sector-wide decision-making, support arts-supportive policies, and improve resource distribution.",
-            "<i>To be published in print and digital at the end of July 2026.</i>"
+            "<i>To be published in print and digital in August 2026.</i>"
         ],
         responsibilities: ["Story design", "visual design", "data analysis", "data visualization design & development"],
         internalSlug: "project-case-for-arts",
@@ -170,7 +170,8 @@ export const projects: Project[] = [
         hashtags: ["dataviz", "dataanalysis", "investigation", "personalproject"],
         link: "https://mindalynworld.github.io/portfolio/projects/police-shootings",
         desc_short: "Should you call the police to de-escalate your mental health emergency? The data says no. This piece is a work in progress, showing an initial exploration of the Washington Post's police shootings database using various data visualizations to investigate the role mental illness plays in these shootings.",
-        responsibilities: ["Everything"]
+        responsibilities: ["Everything"],
+        exclude: true
     },
 
 ]
