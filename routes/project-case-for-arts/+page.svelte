@@ -35,7 +35,7 @@
 
     <div class="img-container">
         <div class="cover-img-container">
-            <img class="cover-img" src={resolve("/images/projects/case-for-arts/stills/bcfa-draft.png")} alt="cover of project">
+            <img class="cover-img" src={resolve("/images/projects/case-for-arts/stills/bcfa-wip.png")} alt="cover of project">
         </div>
     </div>
 
