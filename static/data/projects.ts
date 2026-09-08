@@ -54,28 +54,26 @@ export const projects: Project[] = [
         showExternalNav: true
     },
     {
-        title: "Case for the Arts",
+        title: "The Arts Advantage in Chicago Public Schools",
         imgSrc: "/images/caseforarts_cover.png",
         clients: ["Ingenuity"],
         clientLinks: ["https://www.ingenuity-inc.org/"],
-        date: "July 2026",
+        date: "August 2026",
         arts: true,
         tech: true,
         edu: true,
         technologies: ["R", "Figma"],
         hashtags: ["#dataviz", "informationdesign", "#dataanalysis", "#visualdesign"],
-        link: "",
-        desc_short: "A one-page infographic poster showing the impact of arts education on the academic achievement outcomes of students in Chicago Public Schools.",
+        link: "https://www.ingenuity-inc.org/data-research/data-snapshots/the-arts-advantage-in-chicago-public-schools/",
+        desc_short: "A study of the impact of arts education on the academic achievement outcomes of students in Chicago Public Schools, told through a series of infographics.",
         desc_long: [
             `<b><i>How does access to arts education affect student engagement and academic outcomes?</i></b>`,
-            "A work in progress of a static one-page infographic poster showing the relationship between arts education and academic outcomes of students in Chicago Public Schools. It will be used to advocate for arts-supportive policy and fundraising.", 
+            "A study showing the relationship between arts education and academic outcomes of students in Chicago Public Schools through a  <a href='https://www.ingenuity-inc.org/data-research/data-snapshots/the-arts-advantage-in-chicago-public-schools/' target='_blank' rel='noopener noreferrer'>series of infographics published digitally and in print</a>. This study was commissioned by Ingenuity to advocate for arts-supportive policy and fundraising.", 
             "Ingenuity is a nonprofit organization based in Chicago, dedicated to ensuring all students in Chicago Public Schools (CPS) have access to high-quality arts education. Ingenuity is the leading arts education data authority in Chicago, collecting and analyzing CPS school-level data to influence sector-wide decision-making, support arts-supportive policies, and improve resource distribution.",
-            "<i>To be published in print and digital in August 2026.</i>"
         ],
         responsibilities: ["Story design", "visual design", "data analysis", "data visualization design & development"],
         internalSlug: "project-case-for-arts",
-        showExternalNav: false,
-        exclude: true
+        showExternalNav: true
     },
     {
         title: "The Dark Divide",

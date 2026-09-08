@@ -24,6 +24,21 @@
 		showArrows: false,
         squares: false
 	}
+
+    const projectStills: ImageSet = {
+		images: [
+            {
+				URL: "/images/projects/case-for-arts/stills/summary-frontfinal.jpg",
+				alt: "summary card front"
+			},
+            {
+				URL: "/images/projects/case-for-arts/stills/summary-backfinal.jpg",
+				alt: "summary card back"
+			}
+        ],
+		showArrows: false,
+        squares: false
+	}
 </script>
 
 <div class="page">
@@ -35,7 +50,10 @@
 
     <div class="img-container">
         <div class="cover-img-container">
-            <img class="cover-img" src={resolve("/images/projects/case-for-arts/stills/bcfa-wip.png")} alt="cover of project">
+            <img class="cover-img" src={resolve("/images/projects/case-for-arts/stills/bcfa-final.png")} alt="cover of project">
+        </div>
+        <div class="grid-container">
+            <ImageGrid set={projectStills}/>
         </div>
     </div>
 
