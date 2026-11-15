@@ -141,6 +141,21 @@ export const projects: Project[] = [
         responsibilities: ["Everything"]
     },
     {
+        title: "Choreographing Attention: What can dance teach us about data storytelling?",
+        imgSrc: "/images/portland_cover.png",
+        clients: ["Portland Design Thinkers"],
+        clientLinks: [],
+        date: "July 2026",
+        arts: true,
+        tech: true,
+        edu: true,
+        technologies: ["Figma"],
+        hashtags: ["publicspeaking", "dataviz", "design"],
+        link: "https://drive.google.com/file/d/16fRbXctEeCHAZxsWrDlKFuJpXnKD3jLt/view?usp=sharing",
+        desc_short: "A talk for Portland Design Thinkers: Lightning Lessons Series on data visualization techniques. How can we go beyond simply presenting information to telling engaging, human-centered stories with data? In this talk, I share techniques that can help us guide what people notice, when they notice it, and how they build understanding and connection to the story over time.",
+        responsibilities: ["Everything"]
+    },
+    {
         title: "Project Qute",
         imgSrc: "/images/qute_cover.png",
         clients: ["CalTech", "Google Quantum AI", "Quantum Realm Games"],

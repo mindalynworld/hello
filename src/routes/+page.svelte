@@ -31,6 +31,8 @@
                         <span class="emphasize-text">inform and inspire change</span>. 
                 </p>
 
+                <p>My greatest inspirations in the field include Shirley Wu, Giorgia Lupi, Mona Chalabi, and Erin Davis.</p>
+
                 <h4>Jump to:</h4>
                 <div class="nav-options">
                     <!-- <button class="option-box" onclick={() => handleClick("resume")}>Interactive Resume Explorer</button> -->
@@ -59,7 +61,7 @@
                     <span class="intro-themes" style="border-color: rgb(171, 145, 242); background-color: rgb(171, 145, 242, 0.7);">art & design</span>. 
                 </p>
                 <p>
-                    I wanted to see what this looked like. I was curious... <span class="emphasize-text">how has my involvement in each of these categories looked over time?</span>
+                    I was curious... <span class="emphasize-text">how has my involvement in each of these categories looked over time?</span>
                     I started by entering all of my experiences from the past 10 years (2015 - 2025) into a spreadsheet, and tagged them with themes, their level of time commitment, and duration. 
                     Then, I visualized it. 
                     
@@ -76,8 +78,8 @@
             <Timeline></Timeline>
 
             <div class="narrative" id="area-chart">
-                <p>At a glance, the colors in the <i>Experience Timeline</i> look relatively balanced. But has is always been this way?
-                    <span class="emphasize-text">Have I maintained a balance or have I prioritized categories in different periods of my life?</span>
+                <p>At a glance, the colors in the <i>Experience Timeline</i> look relatively balanced overall (no single color dominates). But is this consistent over time?
+                    <span class="emphasize-text">Have I maintained a balance or have I prioritized categories during different periods of my life?</span>
                 </p>
             </div>
             <h3 class="chart-title">Evolution over time</h3>
@@ -90,11 +92,11 @@
                     Each of these themes is an important part of who I am and what I can offer.
                 </p>
                 <p>
-                Still, I don't regret any part of my journey. During this time I developed so many technical and leadership skills that now empower me to create the things that matter to me. 
-                As I reshape my career as a freelancer, I'm finding that my strongest work is emerging when I weave together my skills and passions in ways that feel authentic, exciting, and balanced again.
+                    Still, I don't regret any part of my journey. During this period I developed so many technical and leadership skills that now empower me to create the things that matter to me. 
+                    As I reshape my career as a freelancer, I'm finding that my strongest work is emerging when I weave together my skills and passions in ways that feel authentic, exciting, and balanced again.
                 </p>
                 <p>
-                    <span class="emphasize-text"><i>Let's work together!</i></span>
+                    <span class="emphasize-text"><i>Let's build together!</i></span>
                 </p>
             </div>
 
@@ -178,10 +180,15 @@
         .headshot {
             width: 100%;           
             height: fit-content;
+            filter: grayscale(100%);
 
             @media (width <= 800px) {
                 width: 200px;
             }
+        }
+
+        .headshot:hover {
+            filter: grayscale(0%);
         }
 
         .text {
