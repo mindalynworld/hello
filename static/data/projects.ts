@@ -33,7 +33,7 @@ export interface ImageSet {
 export const projects: Project[] = [
     {
         title: "The Lollapalooza Arts Education Fund",
-        imgSrc: "/images/lolla_cover.png",
+        imgSrc: "/images/covers/lolla_cover.png",
         clients: ["Ingenuity", "Lollapalooza"],
         clientLinks: ["https://www.ingenuity-inc.org/", "https://www.lollapalooza.com/"],
         date: "August 2025",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     },
     {
         title: "The Arts Advantage in Chicago Public Schools",
-        imgSrc: "/images/caseforarts_cover.png",
+        imgSrc: "/images/covers/caseforarts_cover.png",
         clients: ["Ingenuity"],
         clientLinks: ["https://www.ingenuity-inc.org/"],
         date: "August 2026",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     },
     {
         title: "The Dark Divide",
-        imgSrc: "/images/darkdivide_cover.png",
+        imgSrc: "/images/covers/darkdivide_cover.png",
         clients: ["Gauteng City-Region Observatory"],
         clientLinks: ["https://www.gcro.ac.za/"],
         date: "October 2023",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     },
     {
         title: "Gender, Commuting, and Belonging",
-        imgSrc: "/images/mom_cover.png",
+        imgSrc: "/images/covers/mom_cover.png",
         clients: ["Gauteng City-Region Observatory"],
         clientLinks: ["https://www.gcro.ac.za/"],
         date: "August 2023",
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     },
     {
         title: "My Year in Data 2025",
-        imgSrc: "/images/personal_data_cover.png",
+        imgSrc: "/images/covers/personal_data_cover.png",
         clients: ["Independent"],
         clientLinks: [],
         date: "March 2026",
@@ -127,7 +127,7 @@ export const projects: Project[] = [
     },
     {
         title: "Fueling Flames: 40 years of daily temperatures in San Francisco",
-        imgSrc: "/images/temps_cover.png",
+        imgSrc: "/images/covers/temps_cover.png",
         clients: ["Independent"],
         clientLinks: [],
         date: "December 2025",
@@ -142,7 +142,7 @@ export const projects: Project[] = [
     },
     {
         title: "Choreographing Attention: What can dance teach us about data storytelling?",
-        imgSrc: "/images/portland_cover.png",
+        imgSrc: "/images/covers/portland_cover.png",
         clients: ["Portland Design Thinkers"],
         clientLinks: [],
         date: "July 2026",
@@ -155,9 +155,29 @@ export const projects: Project[] = [
         desc_short: "A talk for Portland Design Thinkers: Lightning Lessons Series on data visualization techniques. How can we go beyond simply presenting information to telling engaging, human-centered stories with data? In this talk, I share techniques that can help us guide what people notice, when they notice it, and how they build understanding and connection to the story over time.",
         responsibilities: ["Everything"]
     },
+        {
+        title: "Data by Hand",
+        imgSrc: "/images/covers/databyhand_cover.png",
+        clients: ["Independent"],
+        clientLinks: [],
+        date: "September 2026",
+        arts: true,
+        tech: false,
+        edu: false,
+        technologies: ["pen & paper"],
+        hashtags: ["dataviz", "design", "dataart", "personalproject"],
+        link: "",
+        desc_short: "A series of hand-drawn data visualizations inspired by Giorgia Lupi and Stefanie Posavec's Dear Data project",
+        desc_long: ["I'm in a long distance friendship with my data bestie between London and California. I met Guk in a master's program for Urban Spatial Data Science at University College London. We both struggle with creative blocks and imposter syndrome, while simultaneously holding the desire to make art, specifically art at the intersection of technology and data.",
+            "<b><i>From across the pond, how could we find a way to both stay in touch and support each others creative journeys? </i></b>",
+            "We got inspired by a project called <a href='https://www.dear-data.com/theproject' target='_blank' rel='noopener noreferrer'><i>Dear Data</i></a> in which two friends, Giorgia Lupi and Stefanie Posavec, chose one thing to track each week, and visualized it by hand on a post card to be mailed to each other. We used this structure as a challenge to be less precious and perfectionist about creating and sharing work.",
+        ],
+        responsibilities: ["Everything"],
+        internalSlug: "project-data-by-hand#top"
+    },
     {
         title: "Project Qute",
-        imgSrc: "/images/qute_cover.png",
+        imgSrc: "/images/covers/qute_cover.png",
         clients: ["CalTech", "Google Quantum AI", "Quantum Realm Games"],
         clientLinks: ["https://www.caltech.edu/", "https://quantumai.google/", "https://chess.quantumnative.io/#/"],
         date: "April 2022",
@@ -172,7 +192,7 @@ export const projects: Project[] = [
     },
     {
         title: "The Role of Mental Illness in Fatal Police Shootings",
-        imgSrc: "/images/police_cover.png",
+        imgSrc: "/images/covers/police_cover.png",
         clients: ["Independent"],
         clientLinks: [],
         date: "January 2025",
